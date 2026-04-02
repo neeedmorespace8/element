@@ -1,0 +1,6590 @@
+[
+  {
+    "id": "water",
+    "name": "水",
+    "emoji": "💧",
+    "parents": ""
+  },
+  {
+    "id": "fire",
+    "name": "火",
+    "emoji": "🔥",
+    "parents": ""
+  },
+  {
+    "id": "earth",
+    "name": "大地",
+    "emoji": "🌍",
+    "parents": ""
+  },
+  {
+    "id": "air",
+    "name": "空氣",
+    "emoji": "🌬️",
+    "parents": ""
+  },
+  {
+    "id": "steam",
+    "name": "蒸汽",
+    "emoji": "💨",
+    "parents": "water+fire"
+  },
+  {
+    "id": "mud",
+    "name": "泥土",
+    "emoji": "🟫",
+    "parents": "water+earth"
+  },
+  {
+    "id": "lava",
+    "name": "岩漿",
+    "emoji": "🌋",
+    "parents": "fire+earth"
+  },
+  {
+    "id": "dust",
+    "name": "塵埃",
+    "emoji": "🌫️",
+    "parents": "air+earth"
+  },
+  {
+    "id": "lightning",
+    "name": "閃電",
+    "emoji": "⚡",
+    "parents": "air+fire"
+  },
+  {
+    "id": "cloud",
+    "name": "雲",
+    "emoji": "☁️",
+    "parents": "air+water"
+  },
+  {
+    "id": "stone",
+    "name": "石頭",
+    "emoji": "🗿",
+    "parents": "lava+water"
+  },
+  {
+    "id": "energy",
+    "name": "能量",
+    "emoji": "✨",
+    "parents": "fire+fire"
+  },
+  {
+    "id": "wind",
+    "name": "風",
+    "emoji": "🍃",
+    "parents": "air+air"
+  },
+  {
+    "id": "sea",
+    "name": "大海",
+    "emoji": "🌊",
+    "parents": "water+water"
+  },
+  {
+    "id": "rain",
+    "name": "雨",
+    "emoji": "🌧️",
+    "parents": "cloud+water"
+  },
+  {
+    "id": "brick",
+    "name": "磚塊",
+    "emoji": "🧱",
+    "parents": "mud+fire"
+  },
+  {
+    "id": "plant",
+    "name": "植物",
+    "emoji": "🌱",
+    "parents": "rain+earth"
+  },
+  {
+    "id": "storm",
+    "name": "風暴",
+    "emoji": "⛈️",
+    "parents": "cloud+lightning"
+  },
+  {
+    "id": "mountain",
+    "name": "山脈",
+    "emoji": "⛰️",
+    "parents": "earth+stone"
+  },
+  {
+    "id": "swamp",
+    "name": "沼澤",
+    "emoji": "🐊",
+    "parents": "plant+mud"
+  },
+  {
+    "id": "metal",
+    "name": "金屬",
+    "emoji": "🔩",
+    "parents": "stone+fire"
+  },
+  {
+    "id": "sand",
+    "name": "沙子",
+    "emoji": "🏖️",
+    "parents": "stone+wind"
+  },
+  {
+    "id": "glass",
+    "name": "玻璃",
+    "emoji": "🔍",
+    "parents": "sand+fire"
+  },
+  {
+    "id": "wave",
+    "name": "波浪",
+    "emoji": "〰️",
+    "parents": "sea+wind"
+  },
+  {
+    "id": "tree",
+    "name": "樹木",
+    "emoji": "🌳",
+    "parents": "plant+earth"
+  },
+  {
+    "id": "wall",
+    "name": "牆壁",
+    "emoji": "🧱",
+    "parents": "brick+brick"
+  },
+  {
+    "id": "sky",
+    "name": "天空",
+    "emoji": "🟦",
+    "parents": "cloud+cloud"
+  },
+  {
+    "id": "sun",
+    "name": "太陽",
+    "emoji": "☀️",
+    "parents": "sky+fire"
+  },
+  {
+    "id": "forest",
+    "name": "森林",
+    "emoji": "🌲",
+    "parents": "tree+tree"
+  },
+  {
+    "id": "life",
+    "name": "生命",
+    "emoji": "🧬",
+    "parents": "swamp+energy"
+  },
+  {
+    "id": "flower",
+    "name": "花朵",
+    "emoji": "🌸",
+    "parents": "plant+sun"
+  },
+  {
+    "id": "blade",
+    "name": "刀刃",
+    "emoji": "🔪",
+    "parents": "metal+stone"
+  },
+  {
+    "id": "bird",
+    "name": "鳥",
+    "emoji": "🐦",
+    "parents": "life+sky"
+  },
+  {
+    "id": "fish",
+    "name": "魚",
+    "emoji": "🐟",
+    "parents": "life+water"
+  },
+  {
+    "id": "animal",
+    "name": "動物",
+    "emoji": "🐾",
+    "parents": "life+earth"
+  },
+  {
+    "id": "clay",
+    "name": "粘土",
+    "emoji": "🏺",
+    "parents": "mud+sand"
+  },
+  {
+    "id": "human",
+    "name": "人類",
+    "emoji": "🧑",
+    "parents": "life+clay"
+  },
+  {
+    "id": "tool",
+    "name": "工具",
+    "emoji": "🛠️",
+    "parents": "human+stone"
+  },
+  {
+    "id": "wood",
+    "name": "木頭",
+    "emoji": "🪵",
+    "parents": "human+tree"
+  },
+  {
+    "id": "farmer",
+    "name": "農民",
+    "emoji": "🧑‍🌾",
+    "parents": "human+plant"
+  },
+  {
+    "id": "house",
+    "name": "房屋",
+    "emoji": "🏠",
+    "parents": "wall+wood"
+  },
+  {
+    "id": "boat",
+    "name": "小船",
+    "emoji": "⛵",
+    "parents": "wood+water"
+  },
+  {
+    "id": "wheel",
+    "name": "輪子",
+    "emoji": "🛞",
+    "parents": "tool+stone"
+  },
+  {
+    "id": "cart",
+    "name": "手推車",
+    "emoji": "🛒",
+    "parents": "wheel+skateboard"
+  },
+  {
+    "id": "field",
+    "name": "田野",
+    "emoji": "🌾",
+    "parents": "farmer+earth"
+  },
+  {
+    "id": "livestock",
+    "name": "家畜",
+    "emoji": "🐄",
+    "parents": "animal+farmer"
+  },
+  {
+    "id": "wool",
+    "name": "羊毛",
+    "emoji": "🧶",
+    "parents": "livestock+tool"
+  },
+  {
+    "id": "fabric",
+    "name": "織物",
+    "emoji": "👕",
+    "parents": "wool+tool"
+  },
+  {
+    "id": "sailor",
+    "name": "水手",
+    "emoji": "🧑‍✈️",
+    "parents": "human+boat"
+  },
+  {
+    "id": "city",
+    "name": "城市",
+    "emoji": "🏙️",
+    "parents": "house+house"
+  },
+  {
+    "id": "plow",
+    "name": "犁",
+    "emoji": "🚜",
+    "parents": "wheat+earth"
+  },
+  {
+    "id": "wheat",
+    "name": "小麥",
+    "emoji": "🌾",
+    "parents": "field+plant"
+  },
+  {
+    "id": "flour",
+    "name": "麵粉",
+    "emoji": "🥡",
+    "parents": "wheat+stone"
+  },
+  {
+    "id": "bread",
+    "name": "麵包",
+    "emoji": "🍞",
+    "parents": "dough+fire"
+  },
+  {
+    "id": "baker",
+    "name": "麵包師",
+    "emoji": "🧑‍🍳",
+    "parents": "human+bread"
+  },
+  {
+    "id": "village",
+    "name": "村莊",
+    "emoji": "🏘️",
+    "parents": "house+field"
+  },
+  {
+    "id": "story",
+    "name": "故事",
+    "emoji": "📜",
+    "parents": "human+life"
+  },
+  {
+    "id": "philosophy",
+    "name": "哲學",
+    "emoji": "🤔",
+    "parents": "story+story"
+  },
+  {
+    "id": "electricity",
+    "name": "電力",
+    "emoji": "💡",
+    "parents": "energy+metal"
+  },
+  {
+    "id": "lightbulb",
+    "name": "燈泡",
+    "emoji": "💡",
+    "parents": "electricity+glass"
+  },
+  {
+    "id": "day",
+    "name": "白天",
+    "emoji": "🌅",
+    "parents": "sun+sky"
+  },
+  {
+    "id": "night",
+    "name": "夜晚",
+    "emoji": "🌃",
+    "parents": "sky+day"
+  },
+  {
+    "id": "star",
+    "name": "星星",
+    "emoji": "⭐",
+    "parents": "sky+energy"
+  },
+  {
+    "id": "moon",
+    "name": "月亮",
+    "emoji": "🌕",
+    "parents": "sky+stone"
+  },
+  {
+    "id": "cheese",
+    "name": "乳酪",
+    "emoji": "🧀",
+    "parents": "tool+rain"
+  },
+  {
+    "id": "book",
+    "name": "書籍",
+    "emoji": "📖",
+    "parents": "story+wood"
+  },
+  {
+    "id": "paper",
+    "name": "紙張",
+    "emoji": "📄",
+    "parents": "wood+tool"
+  },
+  {
+    "id": "letter",
+    "name": "信件",
+    "emoji": "✉️",
+    "parents": "paper+story"
+  },
+  {
+    "id": "library",
+    "name": "圖書館",
+    "emoji": "📚",
+    "parents": "book+book"
+  },
+  {
+    "id": "science",
+    "name": "科學",
+    "emoji": "🔬",
+    "parents": "tool+philosophy"
+  },
+  {
+    "id": "scientist",
+    "name": "科學家",
+    "emoji": "🧑‍🔬",
+    "parents": "human+science"
+  },
+  {
+    "id": "sickness",
+    "name": "疾病",
+    "emoji": "🤢",
+    "parents": "human+rain"
+  },
+  {
+    "id": "hospital",
+    "name": "醫院",
+    "emoji": "🏥",
+    "parents": "house+sickness"
+  },
+  {
+    "id": "doctor",
+    "name": "醫生",
+    "emoji": "🧑‍⚕️",
+    "parents": "human+hospital"
+  },
+  {
+    "id": "car",
+    "name": "汽車",
+    "emoji": "🚗",
+    "parents": "cart+metal"
+  },
+  {
+    "id": "engine",
+    "name": "引擎",
+    "emoji": "⚙️",
+    "parents": "steam+tool"
+  },
+  {
+    "id": "road",
+    "name": "道路",
+    "emoji": "🛣️",
+    "parents": "stone+stone"
+  },
+  {
+    "id": "computer",
+    "name": "計算機",
+    "emoji": "💻",
+    "parents": "electricity+tool"
+  },
+  {
+    "id": "software",
+    "name": "軟體",
+    "emoji": "💾",
+    "parents": "computer+philosophy"
+  },
+  {
+    "id": "internet",
+    "name": "網際網路",
+    "emoji": "🌐",
+    "parents": "computer+computer"
+  },
+  {
+    "id": "knight",
+    "name": "騎士",
+    "emoji": "🛡️",
+    "parents": "warrior+sword"
+  },
+  {
+    "id": "castle",
+    "name": "城堡",
+    "emoji": "🏰",
+    "parents": "house+mountain"
+  },
+  {
+    "id": "king",
+    "name": "國王",
+    "emoji": "👑",
+    "parents": "human+castle"
+  },
+  {
+    "id": "country",
+    "name": "國家",
+    "emoji": "🗺️",
+    "parents": "city+city"
+  },
+  {
+    "id": "law",
+    "name": "法律",
+    "emoji": "⚖️",
+    "parents": "king+story"
+  },
+  {
+    "id": "boat_engine",
+    "name": "船用發動機",
+    "emoji": "🛥️",
+    "parents": "boat+engine"
+  },
+  {
+    "id": "airplane",
+    "name": "飛機",
+    "emoji": "✈️",
+    "parents": "bird+metal"
+  },
+  {
+    "id": "pilot",
+    "name": "飛行員",
+    "emoji": "👨‍✈️",
+    "parents": "human+airplane"
+  },
+  {
+    "id": "airport",
+    "name": "機場",
+    "emoji": "🛄",
+    "parents": "airplane+city"
+  },
+  {
+    "id": "time",
+    "name": "時間",
+    "emoji": "⏳",
+    "parents": "sand+glass"
+  },
+  {
+    "id": "clock",
+    "name": "時鐘",
+    "emoji": "⏰",
+    "parents": "time+tool"
+  },
+  {
+    "id": "watch",
+    "name": "手錶",
+    "emoji": "⌚",
+    "parents": "clock+human"
+  },
+  {
+    "id": "glasses",
+    "name": "眼鏡",
+    "emoji": "👓",
+    "parents": "glass+human"
+  },
+  {
+    "id": "music",
+    "name": "音樂",
+    "emoji": "🎵",
+    "parents": "human+wind"
+  },
+  {
+    "id": "musician",
+    "name": "音樂家",
+    "emoji": "🧑‍🎤",
+    "parents": "human+music"
+  },
+  {
+    "id": "family",
+    "name": "家庭",
+    "emoji": "👨‍👩‍👧‍👦",
+    "parents": "human+house"
+  },
+  {
+    "id": "love",
+    "name": "愛",
+    "emoji": "❤️",
+    "parents": "human+human"
+  },
+  {
+    "id": "island",
+    "name": "島嶼",
+    "emoji": "🏝️",
+    "parents": "mountain+sea"
+  },
+  {
+    "id": "beach",
+    "name": "海灘",
+    "emoji": "🏖️",
+    "parents": "sand+sea"
+  },
+  {
+    "id": "desert",
+    "name": "沙漠",
+    "emoji": "🏜️",
+    "parents": "sand+sand"
+  },
+  {
+    "id": "cactus",
+    "name": "仙人掌",
+    "emoji": "🌵",
+    "parents": "plant+desert"
+  },
+  {
+    "id": "fruit",
+    "name": "水果",
+    "emoji": "🍎",
+    "parents": "flower+tree"
+  },
+  {
+    "id": "juice",
+    "name": "果汁",
+    "emoji": "🧃",
+    "parents": "fruit+water"
+  },
+  {
+    "id": "wine",
+    "name": "葡萄酒",
+    "emoji": "🍷",
+    "parents": "fruit+time"
+  },
+  {
+    "id": "bacteria",
+    "name": "細菌",
+    "emoji": "🦠",
+    "parents": "life+swamp"
+  },
+  {
+    "id": "plankton",
+    "name": "浮游生物",
+    "emoji": "🦐",
+    "parents": "bacteria+sea"
+  },
+  {
+    "id": "whale",
+    "name": "鯨魚",
+    "emoji": "🐋",
+    "parents": "fish+sea"
+  },
+  {
+    "id": "egg",
+    "name": "蛋",
+    "emoji": "🥚",
+    "parents": "bird+bird"
+  },
+  {
+    "id": "chicken",
+    "name": "雞",
+    "emoji": "🐔",
+    "parents": "livestock+bird"
+  },
+  {
+    "id": "milk",
+    "name": "牛奶",
+    "emoji": "🥛",
+    "parents": "livestock+farmer"
+  },
+  {
+    "id": "butter",
+    "name": "黃油",
+    "emoji": "🧈",
+    "parents": "milk+tool"
+  },
+  {
+    "id": "restaurant",
+    "name": "餐廳",
+    "emoji": "🍽️",
+    "parents": "house+baker"
+  },
+  {
+    "id": "gold",
+    "name": "黃金",
+    "emoji": "🏅",
+    "parents": "metal+human"
+  },
+  {
+    "id": "money",
+    "name": "錢",
+    "emoji": "💰",
+    "parents": "gold+paper"
+  },
+  {
+    "id": "bank",
+    "name": "銀行",
+    "emoji": "🏦",
+    "parents": "money+house"
+  },
+  {
+    "id": "robot",
+    "name": "機器人",
+    "emoji": "🤖",
+    "parents": "metal+computer"
+  },
+  {
+    "id": "ai",
+    "name": "AI",
+    "emoji": "🧠",
+    "parents": "software+life"
+  },
+  {
+    "id": "space",
+    "name": "太空",
+    "emoji": "🌌",
+    "parents": "sky+star"
+  },
+  {
+    "id": "rocket",
+    "name": "火箭",
+    "emoji": "🚀",
+    "parents": "airplane+metal"
+  },
+  {
+    "id": "astronaut",
+    "name": "宇航員",
+    "emoji": "👩‍🚀",
+    "parents": "human+rocket"
+  },
+  {
+    "id": "planet",
+    "name": "行星",
+    "emoji": "🪐",
+    "parents": "earth+space"
+  },
+  {
+    "id": "alien",
+    "name": "外星人",
+    "emoji": "👽",
+    "parents": "life+space"
+  },
+  {
+    "id": "ufo",
+    "name": "不明飛行物",
+    "emoji": "🛸",
+    "parents": "airplane+alien"
+  },
+  {
+    "id": "movie",
+    "name": "電影",
+    "emoji": "🎥",
+    "parents": "story+electricity"
+  },
+  {
+    "id": "camera",
+    "name": "照相機",
+    "emoji": "📷",
+    "parents": "glass+metal"
+  },
+  {
+    "id": "photo",
+    "name": "照片",
+    "emoji": "📸",
+    "parents": "camera+paper"
+  },
+  {
+    "id": "art",
+    "name": "藝術",
+    "emoji": "🎨",
+    "parents": "human+flower"
+  },
+  {
+    "id": "painter",
+    "name": "畫家",
+    "emoji": "🧑‍🎨",
+    "parents": "human+art"
+  },
+  {
+    "id": "pyramid",
+    "name": "金字塔",
+    "emoji": "🔺",
+    "parents": "desert+stone"
+  },
+  {
+    "id": "bicycle",
+    "name": "腳踏車",
+    "emoji": "🚲",
+    "parents": "wheel+metal"
+  },
+  {
+    "id": "train",
+    "name": "火車",
+    "emoji": "🚂",
+    "parents": "cart+engine"
+  },
+  {
+    "id": "station",
+    "name": "車站",
+    "emoji": "🚉",
+    "parents": "train+city"
+  },
+  {
+    "id": "bridge",
+    "name": "橋樑",
+    "emoji": "🌉",
+    "parents": "road+river"
+  },
+  {
+    "id": "river",
+    "name": "河流",
+    "emoji": "🏞️",
+    "parents": "water+mountain"
+  },
+  {
+    "id": "waterfall",
+    "name": "瀑布",
+    "emoji": "🌊",
+    "parents": "river+mountain",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "ice",
+    "name": "冰",
+    "emoji": "🧊",
+    "parents": "water+glass"
+  },
+  {
+    "id": "snow",
+    "name": "雪",
+    "emoji": "❄️",
+    "parents": "rain+ice"
+  },
+  {
+    "id": "volcano",
+    "name": "火山",
+    "emoji": "🌋",
+    "parents": "mountain+lava",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "earthquake",
+    "name": "地震",
+    "emoji": "🌍",
+    "parents": "earth+energy"
+  },
+  {
+    "id": "tsunami",
+    "name": "海嘯",
+    "emoji": "🌊",
+    "parents": "wave+earthquake"
+  },
+  {
+    "id": "jungle",
+    "name": "叢林",
+    "emoji": "🌴",
+    "parents": "forest+rain"
+  },
+  {
+    "id": "monkey",
+    "name": "猴子",
+    "emoji": "🐒",
+    "parents": "animal+tree"
+  },
+  {
+    "id": "banana",
+    "name": "香蕉",
+    "emoji": "🍌",
+    "parents": "fruit+monkey"
+  },
+  {
+    "id": "zoo",
+    "name": "動物園",
+    "emoji": "🦁",
+    "parents": "animal+city"
+  },
+  {
+    "id": "circus",
+    "name": "馬戲團",
+    "emoji": "🎪",
+    "parents": "animal+human"
+  },
+  {
+    "id": "school",
+    "name": "學校",
+    "emoji": "🏫",
+    "parents": "house+book"
+  },
+  {
+    "id": "teacher",
+    "name": "老師",
+    "emoji": "🧑‍🏫",
+    "parents": "human+school"
+  },
+  {
+    "id": "student",
+    "name": "學生",
+    "emoji": "🎓",
+    "parents": "human+book"
+  },
+  {
+    "id": "pencil",
+    "name": "鉛筆",
+    "emoji": "✏️",
+    "parents": "paper+tool"
+  },
+  {
+    "id": "notebook",
+    "name": "筆記本",
+    "emoji": "📓",
+    "parents": "paper+pencil"
+  },
+  {
+    "id": "map",
+    "name": "地圖",
+    "emoji": "🗺️",
+    "parents": "paper+earth"
+  },
+  {
+    "id": "explorer",
+    "name": "探險家",
+    "emoji": "🧭",
+    "parents": "human+map"
+  },
+  {
+    "id": "treasure",
+    "name": "寶藏",
+    "emoji": "💎",
+    "parents": "gold+island"
+  },
+  {
+    "id": "pirate",
+    "name": "海盜",
+    "emoji": "🏴‍☠️",
+    "parents": "sailor+sword"
+  },
+  {
+    "id": "ship",
+    "name": "船艦",
+    "emoji": "🚢",
+    "parents": "boat+metal"
+  },
+  {
+    "id": "tornado",
+    "name": "龍捲風",
+    "emoji": "🌪️",
+    "parents": "wind+storm"
+  },
+  {
+    "id": "rainbow",
+    "name": "彩虹",
+    "emoji": "🌈",
+    "parents": "rain+sun"
+  },
+  {
+    "id": "butterfly",
+    "name": "蝴蝶",
+    "emoji": "🦋",
+    "parents": "wind+animal"
+  },
+  {
+    "id": "bee",
+    "name": "蜜蜂",
+    "emoji": "🐝",
+    "parents": "flower+animal"
+  },
+  {
+    "id": "honey",
+    "name": "蜂蜜",
+    "emoji": "🍯",
+    "parents": "bee+flower"
+  },
+  {
+    "id": "cake",
+    "name": "蛋糕",
+    "emoji": "🍰",
+    "parents": "pizza+cheese"
+  },
+  {
+    "id": "party",
+    "name": "派對",
+    "emoji": "🎉",
+    "parents": "cake+music"
+  },
+  {
+    "id": "gift",
+    "name": "禮物",
+    "emoji": "🎁",
+    "parents": "paper+love"
+  },
+  {
+    "id": "fireworks",
+    "name": "煙花",
+    "emoji": "🎆",
+    "parents": "gunpowder+rainbow"
+  },
+  {
+    "id": "explosion",
+    "name": "爆炸",
+    "emoji": "💥",
+    "parents": "fire+energy"
+  },
+  {
+    "id": "medicine",
+    "name": "藥物",
+    "emoji": "💊",
+    "parents": "doctor+science"
+  },
+  {
+    "id": "patient",
+    "name": "病人",
+    "emoji": "🤒",
+    "parents": "human+sickness"
+  },
+  {
+    "id": "orchard",
+    "name": "果園",
+    "emoji": "🍎",
+    "parents": "tree+fruit"
+  },
+  {
+    "id": "iceberg",
+    "name": "冰山",
+    "emoji": "🧊",
+    "parents": "ice+sea"
+  },
+  {
+    "id": "penguin",
+    "name": "企鵝",
+    "emoji": "🐧",
+    "parents": "bird+ice"
+  },
+  {
+    "id": "instrument",
+    "name": "樂器",
+    "emoji": "🎹",
+    "parents": "music+tool"
+  },
+  {
+    "id": "guitar",
+    "name": "吉他",
+    "emoji": "🎸",
+    "parents": "instrument+wood"
+  },
+  {
+    "id": "drum",
+    "name": "鼓",
+    "emoji": "🥁",
+    "parents": "instrument+metal"
+  },
+  {
+    "id": "pet",
+    "name": "寵物",
+    "emoji": "🐕",
+    "parents": "animal+house"
+  },
+  {
+    "id": "cat",
+    "name": "貓",
+    "emoji": "🐱",
+    "parents": "pet+night"
+  },
+  {
+    "id": "dog",
+    "name": "狗",
+    "emoji": "🐶",
+    "parents": "pet+human"
+  },
+  {
+    "id": "blacksmith",
+    "name": "鐵匠",
+    "emoji": "🧑‍🏭",
+    "parents": "metal+metal"
+  },
+  {
+    "id": "hammer",
+    "name": "錘子",
+    "emoji": "🔨",
+    "parents": "tool+metal"
+  },
+  {
+    "id": "idea",
+    "name": "主意",
+    "emoji": "💡",
+    "parents": "human+lightbulb"
+  },
+  {
+    "id": "university",
+    "name": "大學",
+    "emoji": "🏛️",
+    "parents": "school+library"
+  },
+  {
+    "id": "professor",
+    "name": "教授",
+    "emoji": "👨‍🏫",
+    "parents": "teacher+science"
+  },
+  {
+    "id": "radio",
+    "name": "收音機",
+    "emoji": "📻",
+    "parents": "music+electricity"
+  },
+  {
+    "id": "battery",
+    "name": "電池",
+    "emoji": "🔋",
+    "parents": "electricity+metal"
+  },
+  {
+    "id": "flashlight",
+    "name": "手電筒",
+    "emoji": "🔦",
+    "parents": "lightbulb+battery"
+  },
+  {
+    "id": "wildlife",
+    "name": "野生動物",
+    "emoji": "🦌",
+    "parents": "forest+animal"
+  },
+  {
+    "id": "astronomer",
+    "name": "天文學家",
+    "emoji": "🔭",
+    "parents": "human+telescope"
+  },
+  {
+    "id": "galaxy",
+    "name": "星系",
+    "emoji": "🌌",
+    "parents": "space+star"
+  },
+  {
+    "id": "actor",
+    "name": "演員",
+    "emoji": "🎭",
+    "parents": "human+movie"
+  },
+  {
+    "id": "drawing",
+    "name": "畫作",
+    "emoji": "🖼️",
+    "parents": "art+paper"
+  },
+  {
+    "id": "photographer",
+    "name": "攝影師",
+    "emoji": "📸",
+    "parents": "human+camera"
+  },
+  {
+    "id": "cryptocurrency",
+    "name": "加密貨幣",
+    "emoji": "🪙",
+    "parents": "money+internet"
+  },
+  {
+    "id": "email",
+    "name": "電子郵件",
+    "emoji": "📧",
+    "parents": "letter+internet"
+  },
+  {
+    "id": "social_media",
+    "name": "社交媒體",
+    "emoji": "📱",
+    "parents": "internet+human"
+  },
+  {
+    "id": "vegetable",
+    "name": "蔬菜",
+    "emoji": "🥦",
+    "parents": "plant+farmer"
+  },
+  {
+    "id": "soup",
+    "name": "湯",
+    "emoji": "🍲",
+    "parents": "vegetable+water"
+  },
+  {
+    "id": "salad",
+    "name": "沙拉",
+    "emoji": "🥗",
+    "parents": "vegetable+vegetable"
+  },
+  {
+    "id": "chef",
+    "name": "廚師",
+    "emoji": "👨‍🍳",
+    "parents": "human+restaurant"
+  },
+  {
+    "id": "microscope",
+    "name": "顯微鏡",
+    "emoji": "🔬",
+    "parents": "glass+science"
+  },
+  {
+    "id": "virus",
+    "name": "病毒",
+    "emoji": "🦠",
+    "parents": "bacteria+sickness"
+  },
+  {
+    "id": "vaccine",
+    "name": "疫苗",
+    "emoji": "💉",
+    "parents": "medicine+virus"
+  },
+  {
+    "id": "firefighter",
+    "name": "消防員",
+    "emoji": "🧑‍🚒",
+    "parents": "human+fire"
+  },
+  {
+    "id": "police",
+    "name": "警察",
+    "emoji": "👮",
+    "parents": "human+law"
+  },
+  {
+    "id": "prison",
+    "name": "監獄",
+    "emoji": "🔒",
+    "parents": "house+law"
+  },
+  {
+    "id": "television",
+    "name": "電視",
+    "emoji": "📺",
+    "parents": "movie+glass"
+  },
+  {
+    "id": "phone",
+    "name": "電話",
+    "emoji": "📱",
+    "parents": "computer+tool"
+  },
+  {
+    "id": "wax",
+    "name": "蠟",
+    "emoji": "🕯️",
+    "parents": "bee+tool"
+  },
+  {
+    "id": "candle",
+    "name": "蠟燭",
+    "emoji": "🕯️",
+    "parents": "wax+fire"
+  },
+  {
+    "id": "garden",
+    "name": "花園",
+    "emoji": "🌻",
+    "parents": "flower+wall"
+  },
+  {
+    "id": "seed",
+    "name": "種子",
+    "emoji": "🌰",
+    "parents": "plant+time"
+  },
+  {
+    "id": "jam",
+    "name": "果醬",
+    "emoji": "🍓",
+    "parents": "fruit+fire"
+  },
+  {
+    "id": "tea",
+    "name": "茶",
+    "emoji": "🍵",
+    "parents": "plant+water"
+  },
+  {
+    "id": "coffee",
+    "name": "咖啡",
+    "emoji": "☕",
+    "parents": "plant+energy"
+  },
+  {
+    "id": "sugar",
+    "name": "糖",
+    "emoji": "🍚",
+    "parents": "plant+tool"
+  },
+  {
+    "id": "firetruck",
+    "name": "消防車",
+    "emoji": "🚒",
+    "parents": "car+fire"
+  },
+  {
+    "id": "ambulance",
+    "name": "救護車",
+    "emoji": "🚑",
+    "parents": "car+hospital"
+  },
+  {
+    "id": "lighthouse",
+    "name": "燈塔",
+    "emoji": "🏮",
+    "parents": "house+lightbulb"
+  },
+  {
+    "id": "binoculars",
+    "name": "雙筒望遠鏡",
+    "emoji": "🔭",
+    "parents": "glasses+glasses"
+  },
+  {
+    "id": "compass",
+    "name": "指南針",
+    "emoji": "🧭",
+    "parents": "hammer+tool"
+  },
+  {
+    "id": "newspaper",
+    "name": "報紙",
+    "emoji": "📰",
+    "parents": "letter+story"
+  },
+  {
+    "id": "journalist",
+    "name": "記者",
+    "emoji": "📰",
+    "parents": "human+newspaper"
+  },
+  {
+    "id": "detective",
+    "name": "偵探",
+    "emoji": "🕵️",
+    "parents": "human+glasses"
+  },
+  {
+    "id": "wineglass",
+    "name": "酒杯",
+    "emoji": "🥂",
+    "parents": "wine+glass"
+  },
+  {
+    "id": "fossil",
+    "name": "化石",
+    "emoji": "🦕",
+    "parents": "stone+life",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "museum",
+    "name": "博物館",
+    "emoji": "🏛️",
+    "parents": "house+hero"
+  },
+  {
+    "id": "archaeologist",
+    "name": "考古學家",
+    "emoji": "🧑‍🔬",
+    "parents": "human+fossil"
+  },
+  {
+    "id": "diamond",
+    "name": "鑽石",
+    "emoji": "💎",
+    "parents": "pressure+coal"
+  },
+  {
+    "id": "coal",
+    "name": "煤炭",
+    "emoji": "🪨",
+    "parents": "plant+pressure"
+  },
+  {
+    "id": "pressure",
+    "name": "壓力",
+    "emoji": "🏋️",
+    "parents": "earth+tool"
+  },
+  {
+    "id": "ring",
+    "name": "戒指",
+    "emoji": "💍",
+    "parents": "diamond+metal"
+  },
+  {
+    "id": "wedding",
+    "name": "婚禮",
+    "emoji": "💒",
+    "parents": "love+house"
+  },
+  {
+    "id": "santa",
+    "name": "聖誕老人",
+    "emoji": "🎅",
+    "parents": "human+christmas_tree"
+  },
+  {
+    "id": "christmas_tree",
+    "name": "聖誕樹",
+    "emoji": "🎄",
+    "parents": "tree+lightbulb"
+  },
+  {
+    "id": "snowman",
+    "name": "雪人",
+    "emoji": "⛄",
+    "parents": "snow+human"
+  },
+  {
+    "id": "igloo",
+    "name": "冰屋",
+    "emoji": "🏠",
+    "parents": "ice+house"
+  },
+  {
+    "id": "polar_bear",
+    "name": "北極熊",
+    "emoji": "🐻‍❄️",
+    "parents": "animal+ice"
+  },
+  {
+    "id": "skateboard",
+    "name": "滑板",
+    "emoji": "🛹",
+    "parents": "wheel+wood"
+  },
+  {
+    "id": "surfboard",
+    "name": "衝浪板",
+    "emoji": "🏄",
+    "parents": "wood+wave"
+  },
+  {
+    "id": "surfer",
+    "name": "衝浪者",
+    "emoji": "🏄‍♂️",
+    "parents": "human+wave"
+  },
+  {
+    "id": "scuba_diver",
+    "name": "水肺潛水員",
+    "emoji": "🤿",
+    "parents": "human+sea"
+  },
+  {
+    "id": "coral",
+    "name": "珊瑚",
+    "emoji": "🪸",
+    "parents": "plant+sea"
+  },
+  {
+    "id": "shark",
+    "name": "鯊魚",
+    "emoji": "🦈",
+    "parents": "fish+blade"
+  },
+  {
+    "id": "octopus",
+    "name": "章魚",
+    "emoji": "🐙",
+    "parents": "fish+animal"
+  },
+  {
+    "id": "pottery",
+    "name": "陶器",
+    "emoji": "🏺",
+    "parents": "clay+wheel"
+  },
+  {
+    "id": "vase",
+    "name": "花瓶",
+    "emoji": "🏺",
+    "parents": "pottery+flower"
+  },
+  {
+    "id": "piano",
+    "name": "鋼琴",
+    "emoji": "🎹",
+    "parents": "instrument+instrument"
+  },
+  {
+    "id": "violin",
+    "name": "小提琴",
+    "emoji": "🎻",
+    "parents": "instrument+music"
+  },
+  {
+    "id": "concert",
+    "name": "演唱會",
+    "emoji": "🎤",
+    "parents": "music+city"
+  },
+  {
+    "id": "theater",
+    "name": "劇院",
+    "emoji": "🎭",
+    "parents": "house+movie"
+  },
+  {
+    "id": "corn",
+    "name": "玉米",
+    "emoji": "🌽",
+    "parents": "plant+plant"
+  },
+  {
+    "id": "scarecrow",
+    "name": "稻草人",
+    "emoji": "🧑‍🌾",
+    "parents": "human+bird"
+  },
+  {
+    "id": "witch",
+    "name": "女巫",
+    "emoji": "🧙‍♀️",
+    "parents": "human+broom"
+  },
+  {
+    "id": "broom",
+    "name": "掃帚",
+    "emoji": "🧹",
+    "parents": "tool+dust"
+  },
+  {
+    "id": "wizard",
+    "name": "巫師",
+    "emoji": "🧙‍♂️",
+    "parents": "human+magic"
+  },
+  {
+    "id": "fairy_tale",
+    "name": "童話",
+    "emoji": "🧚",
+    "parents": "story+magic"
+  },
+  {
+    "id": "robotics",
+    "name": "機器人學",
+    "emoji": "🤖",
+    "parents": "robot+science"
+  },
+  {
+    "id": "drone",
+    "name": "無人機",
+    "emoji": "🚁",
+    "parents": "robot+airplane"
+  },
+  {
+    "id": "satellite",
+    "name": "衞星",
+    "emoji": "🛰️",
+    "parents": "metal+space"
+  },
+  {
+    "id": "telescope_observatory",
+    "name": "天文臺",
+    "emoji": "🏢",
+    "parents": "telescope+house"
+  },
+  {
+    "id": "meteor",
+    "name": "流星",
+    "emoji": "☄️",
+    "parents": "stone+space"
+  },
+  {
+    "id": "comet",
+    "name": "彗星",
+    "emoji": "☄️",
+    "parents": "ice+space"
+  },
+  {
+    "id": "superhero",
+    "name": "超級英雄",
+    "emoji": "🦸",
+    "parents": "hero+hero"
+  },
+  {
+    "id": "cape",
+    "name": "斗篷",
+    "emoji": "🦸",
+    "parents": "fabric+hero"
+  },
+  {
+    "id": "hero",
+    "name": "英雄",
+    "emoji": "🦸",
+    "parents": "human+story"
+  },
+  {
+    "id": "death",
+    "name": "死亡",
+    "emoji": "💀",
+    "parents": "human+time"
+  },
+  {
+    "id": "zombie",
+    "name": "殭屍",
+    "emoji": "🧟",
+    "parents": "human+death"
+  },
+  {
+    "id": "ghost",
+    "name": "幽靈",
+    "emoji": "👻",
+    "parents": "death+energy"
+  },
+  {
+    "id": "coffin",
+    "name": "棺材",
+    "emoji": "⚰️",
+    "parents": "death+wood"
+  },
+  {
+    "id": "undead",
+    "name": "不死生物",
+    "emoji": "🧟‍♂️",
+    "parents": "zombie+life"
+  },
+  {
+    "id": "haunted_house",
+    "name": "鬼屋",
+    "emoji": "🏚️",
+    "parents": "ghost+house"
+  },
+  {
+    "id": "bone",
+    "name": "骨頭",
+    "emoji": "🦴",
+    "parents": "animal+time"
+  },
+  {
+    "id": "stadium",
+    "name": "體育場",
+    "emoji": "🏟️",
+    "parents": "field+city"
+  },
+  {
+    "id": "athlete",
+    "name": "運動員",
+    "emoji": "🏃",
+    "parents": "human+energy"
+  },
+  {
+    "id": "swimming_pool",
+    "name": "游泳池",
+    "emoji": "🏊",
+    "parents": "water+house"
+  },
+  {
+    "id": "gym",
+    "name": "健身房",
+    "emoji": "🏋️‍♂️",
+    "parents": "house+tool"
+  },
+  {
+    "id": "bicycle_race",
+    "name": "腳踏車賽",
+    "emoji": "🚴",
+    "parents": "bicycle+human"
+  },
+  {
+    "id": "yoga",
+    "name": "瑜伽",
+    "emoji": "🧘",
+    "parents": "human+philosophy"
+  },
+  {
+    "id": "autumn",
+    "name": "秋天",
+    "emoji": "🍂",
+    "parents": "tree+wind"
+  },
+  {
+    "id": "spring",
+    "name": "春天",
+    "emoji": "🌷",
+    "parents": "rain+flower"
+  },
+  {
+    "id": "summer",
+    "name": "夏天",
+    "emoji": "🏖️",
+    "parents": "sun+beach"
+  },
+  {
+    "id": "winter",
+    "name": "冬天",
+    "emoji": "❄️",
+    "parents": "snow+time"
+  },
+  {
+    "id": "umbrella",
+    "name": "雨傘",
+    "emoji": "☂️",
+    "parents": "rain+fabric"
+  },
+  {
+    "id": "hail",
+    "name": "冰雹",
+    "emoji": "🌨️",
+    "parents": "ice+storm"
+  },
+  {
+    "id": "fog",
+    "name": "霧",
+    "emoji": "🌫️",
+    "parents": "cloud+dust"
+  },
+  {
+    "id": "shell",
+    "name": "貝殼",
+    "emoji": "🐚",
+    "parents": "animal+beach"
+  },
+  {
+    "id": "pearl",
+    "name": "珍珠",
+    "emoji": "🦪",
+    "parents": "sand+shell"
+  },
+  {
+    "id": "dolphin",
+    "name": "海豚",
+    "emoji": "🐬",
+    "parents": "fish+ocean"
+  },
+  {
+    "id": "ocean",
+    "name": "海洋",
+    "emoji": "🌊",
+    "parents": "sea+sea"
+  },
+  {
+    "id": "scuba_gear",
+    "name": "潛水裝備",
+    "emoji": "🤿",
+    "parents": "glasses+air"
+  },
+  {
+    "id": "pumpkin",
+    "name": "南瓜",
+    "emoji": "🎃",
+    "parents": "vegetable+fire"
+  },
+  {
+    "id": "rabbit",
+    "name": "兔子",
+    "emoji": "🐇",
+    "parents": "animal+field"
+  },
+  {
+    "id": "firecracker",
+    "name": "鞭炮",
+    "emoji": "🧨",
+    "parents": "fireworks+paper"
+  },
+  {
+    "id": "carnival",
+    "name": "狂歡節",
+    "emoji": "🎡",
+    "parents": "party+wheel"
+  },
+  {
+    "id": "birthday",
+    "name": "生日",
+    "emoji": "🎂",
+    "parents": "cake+time"
+  },
+  {
+    "id": "smoke",
+    "name": "煙霧",
+    "emoji": "💨",
+    "parents": "dust+air"
+  },
+  {
+    "id": "pollution",
+    "name": "汙染",
+    "emoji": "🏭",
+    "parents": "smoke+city"
+  },
+  {
+    "id": "trash",
+    "name": "垃圾",
+    "emoji": "🗑️",
+    "parents": "paper+human"
+  },
+  {
+    "id": "recycling",
+    "name": "回收",
+    "emoji": "♻️",
+    "parents": "tool+trash"
+  },
+  {
+    "id": "solar_panel",
+    "name": "太陽能電池板",
+    "emoji": "☀️",
+    "parents": "sun+metal"
+  },
+  {
+    "id": "wind_turbine",
+    "name": "風力渦輪機",
+    "emoji": "🌬️",
+    "parents": "wind+metal"
+  },
+  {
+    "id": "national_park",
+    "name": "國家公園",
+    "emoji": "🏞️",
+    "parents": "forest+law"
+  },
+  {
+    "id": "happiness",
+    "name": "幸福",
+    "emoji": "😊",
+    "parents": "love+human"
+  },
+  {
+    "id": "sadness",
+    "name": "悲傷",
+    "emoji": "😢",
+    "parents": "coffin+human"
+  },
+  {
+    "id": "fear",
+    "name": "恐懼",
+    "emoji": "😱",
+    "parents": "ghost+human"
+  },
+  {
+    "id": "dream",
+    "name": "夢",
+    "emoji": "💭",
+    "parents": "night+idea"
+  },
+  {
+    "id": "psychologist",
+    "name": "心理學家",
+    "emoji": "🧠",
+    "parents": "doctor+philosophy"
+  },
+  {
+    "id": "peace",
+    "name": "和平",
+    "emoji": "🕊️",
+    "parents": "bird+love"
+  },
+  {
+    "id": "meditation",
+    "name": "冥想",
+    "emoji": "🧘‍♀️",
+    "parents": "human+peace"
+  },
+  {
+    "id": "shirt",
+    "name": "襯衫",
+    "emoji": "👕",
+    "parents": "fabric+tool"
+  },
+  {
+    "id": "hat",
+    "name": "帽子",
+    "emoji": "🧢",
+    "parents": "fabric+human"
+  },
+  {
+    "id": "dress",
+    "name": "連衣裙",
+    "emoji": "👗",
+    "parents": "fabric+flower"
+  },
+  {
+    "id": "shoes",
+    "name": "鞋子",
+    "emoji": "👟",
+    "parents": "fabric+wheel"
+  },
+  {
+    "id": "stage",
+    "name": "舞臺",
+    "emoji": "🎪",
+    "parents": "wood+lightbulb"
+  },
+  {
+    "id": "fashion_show",
+    "name": "時裝秀",
+    "emoji": "👠",
+    "parents": "human+stage"
+  },
+  {
+    "id": "jewelry",
+    "name": "珠寶",
+    "emoji": "💍",
+    "parents": "gold+ring"
+  },
+  {
+    "id": "cave",
+    "name": "洞穴",
+    "emoji": "🕳️",
+    "parents": "mountain+human"
+  },
+  {
+    "id": "ancient",
+    "name": "古代",
+    "emoji": "🏺",
+    "parents": "time+pottery"
+  },
+  {
+    "id": "medieval",
+    "name": "中世紀",
+    "emoji": "🏰",
+    "parents": "time+castle"
+  },
+  {
+    "id": "industrial",
+    "name": "工業",
+    "emoji": "🏭",
+    "parents": "time+engine"
+  },
+  {
+    "id": "future",
+    "name": "未來",
+    "emoji": "🤖",
+    "parents": "time+robot"
+  },
+  {
+    "id": "history_book",
+    "name": "歷史書",
+    "emoji": "📜",
+    "parents": "book+time"
+  },
+  {
+    "id": "eiffel_tower",
+    "name": "埃菲爾鐵塔",
+    "emoji": "🇫🇷",
+    "parents": "metal+tower",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "leaning_tower_of_pisa",
+    "name": "比薩斜塔",
+    "emoji": "🇮🇹",
+    "parents": "tower+stone",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "colosseum",
+    "name": "羅馬鬥獸場",
+    "emoji": "🇮🇹",
+    "parents": "stadium+stone",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "prague_castle",
+    "name": "布拉格城堡",
+    "emoji": "🇨🇿",
+    "parents": "castle+city",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "ruins",
+    "name": "遺蹟",
+    "emoji": "🏚️",
+    "parents": "house+time"
+  },
+  {
+    "id": "grand_canyon",
+    "name": "大峽谷",
+    "emoji": "🏜️",
+    "parents": "canyon+river",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "canyon",
+    "name": "峽谷",
+    "emoji": "🏞️",
+    "parents": "mountain+earthquake"
+  },
+  {
+    "id": "stonehenge",
+    "name": "巨石陣",
+    "emoji": "🪨",
+    "parents": "stone+circle",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "petra",
+    "name": "佩特拉",
+    "emoji": "🏛️",
+    "parents": "ruins+desert"
+  },
+  {
+    "id": "chichen_itza",
+    "name": "奇琴伊察",
+    "emoji": "🏛️",
+    "parents": "pyramid+jungle"
+  },
+  {
+    "id": "golden_gate_bridge",
+    "name": "金門大橋",
+    "emoji": "🌉",
+    "parents": "bridge+gold",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "niagara_falls",
+    "name": "尼亞加拉瀑布",
+    "emoji": "🌊",
+    "parents": "waterfall+lake",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "lake",
+    "name": "湖泊",
+    "emoji": "🏞️",
+    "parents": "water+human"
+  },
+  {
+    "id": "acropolis",
+    "name": "雅典衞城",
+    "emoji": "🏛️",
+    "parents": "ruins+mountain"
+  },
+  {
+    "id": "mount_everest",
+    "name": "珠穆朗瑪峰",
+    "emoji": "⛰️",
+    "parents": "mountain+snow",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "victoria_falls",
+    "name": "維多利亞瀑布",
+    "emoji": "🌊",
+    "parents": "waterfall+river",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "aurora_borealis",
+    "name": "北極光",
+    "emoji": "🌌",
+    "parents": "sky+lightning",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "amazon_rainforest",
+    "name": "亞馬遜雨林",
+    "emoji": "🌴",
+    "parents": "jungle+river",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "great_barrier_reef",
+    "name": "大堡礁",
+    "emoji": "🇦🇺",
+    "parents": "coral+sea",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "tower",
+    "name": "塔",
+    "emoji": "🗼",
+    "parents": "house+sky"
+  },
+  {
+    "id": "great_wall",
+    "name": "長城",
+    "emoji": "🇨🇳",
+    "parents": "wall+mountain",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "mirage",
+    "name": "海市蜃樓",
+    "emoji": "🌁",
+    "parents": "city+desert"
+  },
+  {
+    "id": "wraith_king",
+    "name": "冥魂大帝",
+    "emoji": "😈",
+    "parents": "castle+ghost"
+  },
+  {
+    "id": "virtual_pet",
+    "name": "電子寵物",
+    "emoji": "📟",
+    "parents": "computer+pet"
+  },
+  {
+    "id": "monsoon",
+    "name": "季風",
+    "emoji": "🌏",
+    "parents": "rain+wind"
+  },
+  {
+    "id": "quartz",
+    "name": "石英",
+    "emoji": "💎",
+    "parents": "pressure+stone"
+  },
+  {
+    "id": "crystal",
+    "name": "水晶",
+    "emoji": "🔮",
+    "parents": "quartz+water"
+  },
+  {
+    "id": "blood",
+    "name": "血液",
+    "emoji": "🩸",
+    "parents": "blade+animal"
+  },
+  {
+    "id": "heart",
+    "name": "心臟",
+    "emoji": "❤️",
+    "parents": "blood+life"
+  },
+  {
+    "id": "broken_heart",
+    "name": "心碎",
+    "emoji": "💔",
+    "parents": "heart+sadness"
+  },
+  {
+    "id": "tears",
+    "name": "眼淚",
+    "emoji": "💧",
+    "parents": "broken_heart+human"
+  },
+  {
+    "id": "owl",
+    "name": "貓頭鷹",
+    "emoji": "🦉",
+    "parents": "bird+night"
+  },
+  {
+    "id": "jealousy",
+    "name": "嫉妒",
+    "emoji": "💚",
+    "parents": "love+sickness"
+  },
+  {
+    "id": "puzzle",
+    "name": "拼圖",
+    "emoji": "🧩",
+    "parents": "idea+tool"
+  },
+  {
+    "id": "shadow",
+    "name": "影子",
+    "emoji": "🕶",
+    "parents": "light+night"
+  },
+  {
+    "id": "light",
+    "name": "光",
+    "emoji": "✨️",
+    "parents": "electricity+sun"
+  },
+  {
+    "id": "illusion",
+    "name": "幻覺",
+    "emoji": "💫",
+    "parents": "light+shadow"
+  },
+  {
+    "id": "invisibility",
+    "name": "隱身",
+    "emoji": "🙈",
+    "parents": "illusion+shadow"
+  },
+  {
+    "id": "sound",
+    "name": "聲音",
+    "emoji": "🔊",
+    "parents": "air+wave"
+  },
+  {
+    "id": "echo",
+    "name": "回聲",
+    "emoji": "📢",
+    "parents": "mountain+sound"
+  },
+  {
+    "id": "silence",
+    "name": "寂靜",
+    "emoji": "🤫",
+    "parents": "air+peace"
+  },
+  {
+    "id": "bbq",
+    "name": "燒烤",
+    "emoji": "🍖",
+    "parents": "animal+fire"
+  },
+  {
+    "id": "meat",
+    "name": "肉",
+    "emoji": "🥩",
+    "parents": "animal+tool"
+  },
+  {
+    "id": "bacon",
+    "name": "培根",
+    "emoji": "🥓",
+    "parents": "fire+meat"
+  },
+  {
+    "id": "breakfast",
+    "name": "早餐",
+    "emoji": "🍳",
+    "parents": "bacon+egg"
+  },
+  {
+    "id": "meat_pie",
+    "name": "肉餡餅",
+    "emoji": "🥧",
+    "parents": "dough+meat"
+  },
+  {
+    "id": "lottery",
+    "name": "彩票",
+    "emoji": "🎫",
+    "parents": "money+paper"
+  },
+  {
+    "id": "casino",
+    "name": "賭場",
+    "emoji": "🎰",
+    "parents": "city+money"
+  },
+  {
+    "id": "cigarette",
+    "name": "香煙",
+    "emoji": "🚬",
+    "parents": "fire+plant"
+  },
+  {
+    "id": "rhythm",
+    "name": "節奏",
+    "emoji": "🥁",
+    "parents": "heart+music"
+  },
+  {
+    "id": "dance",
+    "name": "舞蹈",
+    "emoji": "💃",
+    "parents": "human+rhythm"
+  },
+  {
+    "id": "festival",
+    "name": "節日",
+    "emoji": "🎊",
+    "parents": "city+dance"
+  },
+  {
+    "id": "influencer",
+    "name": "網紅",
+    "emoji": "🤳",
+    "parents": "human+social_media"
+  },
+  {
+    "id": "cloud_storage",
+    "name": "雲端儲存",
+    "emoji": "☁️",
+    "parents": "cloud+computer"
+  },
+  {
+    "id": "firewall",
+    "name": "防火牆",
+    "emoji": "🔥",
+    "parents": "fire+wall"
+  },
+  {
+    "id": "computer_virus",
+    "name": "計算機病毒",
+    "emoji": "🦠",
+    "parents": "computer+sickness"
+  },
+  {
+    "id": "programmer",
+    "name": "程式設計師",
+    "emoji": "👨",
+    "parents": "computer+human"
+  },
+  {
+    "id": "code",
+    "name": "程式碼",
+    "emoji": "💻",
+    "parents": "philosophy+programmer"
+  },
+  {
+    "id": "bug",
+    "name": "漏洞",
+    "emoji": "❎",
+    "parents": "code+sickness"
+  },
+  {
+    "id": "language",
+    "name": "語言",
+    "emoji": "🗣",
+    "parents": "human+sound"
+  },
+  {
+    "id": "translation",
+    "name": "翻譯",
+    "emoji": "🔤",
+    "parents": "book+language"
+  },
+  {
+    "id": "factory",
+    "name": "工廠",
+    "emoji": "🏭",
+    "parents": "engine+house"
+  },
+  {
+    "id": "can",
+    "name": "罐頭",
+    "emoji": "🥫",
+    "parents": "factory+metal"
+  },
+  {
+    "id": "canned_fruit",
+    "name": "水果罐頭",
+    "emoji": "🥫",
+    "parents": "can+fruit"
+  },
+  {
+    "id": "canned_fish",
+    "name": "魚罐頭",
+    "emoji": "🥫",
+    "parents": "can+fish"
+  },
+  {
+    "id": "canned_meat",
+    "name": "肉罐頭",
+    "emoji": "🥫",
+    "parents": "can+meat"
+  },
+  {
+    "id": "canned_corn",
+    "name": "玉米罐頭",
+    "emoji": "🥫",
+    "parents": "can+corn"
+  },
+  {
+    "id": "canned_soup",
+    "name": "湯罐頭",
+    "emoji": "🥫",
+    "parents": "can+soup"
+  },
+  {
+    "id": "vegetarian",
+    "name": "素食者",
+    "emoji": "🥬",
+    "parents": "human+vegetable"
+  },
+  {
+    "id": "company",
+    "name": "公司",
+    "emoji": "💼",
+    "parents": "human+money"
+  },
+  {
+    "id": "employee",
+    "name": "員工",
+    "emoji": "👔",
+    "parents": "company+human"
+  },
+  {
+    "id": "salary",
+    "name": "工資",
+    "emoji": "💵",
+    "parents": "employee+money"
+  },
+  {
+    "id": "vacation",
+    "name": "假期",
+    "emoji": "🏖",
+    "parents": "beach+time"
+  },
+  {
+    "id": "passport",
+    "name": "護照",
+    "emoji": "🛂",
+    "parents": "country+paper"
+  },
+  {
+    "id": "tourism",
+    "name": "旅遊",
+    "emoji": "🧳",
+    "parents": "airplane+passport"
+  },
+  {
+    "id": "souvenir",
+    "name": "紀念品",
+    "emoji": "🗿",
+    "parents": "gift+tourism"
+  },
+  {
+    "id": "freedom",
+    "name": "自由",
+    "emoji": "🕊",
+    "parents": "bird+peace"
+  },
+  {
+    "id": "statue_of_liberty",
+    "name": "自由女神像",
+    "emoji": "🇺🇸",
+    "parents": "freedom+stone",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "gunpowder",
+    "name": "火藥",
+    "emoji": "💥",
+    "parents": "dust+fire"
+  },
+  {
+    "id": "gun",
+    "name": "槍",
+    "emoji": "🔫",
+    "parents": "gunpowder+metal"
+  },
+  {
+    "id": "bomb",
+    "name": "炸彈",
+    "emoji": "💣",
+    "parents": "gunpowder+gunpowder"
+  },
+  {
+    "id": "united_nations",
+    "name": "聯合國",
+    "emoji": "🏢",
+    "parents": "country+country"
+  },
+  {
+    "id": "culture",
+    "name": "文化",
+    "emoji": "🎎",
+    "parents": "country+story"
+  },
+  {
+    "id": "tradition",
+    "name": "傳統",
+    "emoji": "🪭",
+    "parents": "culture+time"
+  },
+  {
+    "id": "rich",
+    "name": "富有",
+    "emoji": "🤑",
+    "parents": "money+money"
+  },
+  {
+    "id": "alien_monster",
+    "name": "外星怪物",
+    "emoji": "👾",
+    "parents": "alien+ghost"
+  },
+  {
+    "id": "clown",
+    "name": "小丑",
+    "emoji": "🤡",
+    "parents": "circus+human"
+  },
+  {
+    "id": "dark",
+    "name": "黑暗",
+    "emoji": "⚫",
+    "parents": "night+night"
+  },
+  {
+    "id": "text_message",
+    "name": "簡訊",
+    "emoji": "💬",
+    "parents": "letter+phone"
+  },
+  {
+    "id": "tortilla",
+    "name": "玉米餅",
+    "emoji": "🫓",
+    "parents": "corn+dough"
+  },
+  {
+    "id": "burrito",
+    "name": "捲餅",
+    "emoji": "🌯",
+    "parents": "meat+tortilla"
+  },
+  {
+    "id": "millionaire",
+    "name": "百萬富翁",
+    "emoji": "💰",
+    "parents": "human+rich"
+  },
+  {
+    "id": "comedy_show",
+    "name": "喜劇表演",
+    "emoji": "🎭",
+    "parents": "clown+stage"
+  },
+  {
+    "id": "romance",
+    "name": "浪漫",
+    "emoji": "💝",
+    "parents": "flower+love_letter"
+  },
+  {
+    "id": "mexican_restaurant",
+    "name": "墨西哥餐廳",
+    "emoji": "🌮",
+    "parents": "burrito+restaurant"
+  },
+  {
+    "id": "meteor_shower",
+    "name": "流星雨",
+    "emoji": "🌠",
+    "parents": "meteor+meteor",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "constellation",
+    "name": "星座",
+    "emoji": "✨",
+    "parents": "star+star"
+  },
+  {
+    "id": "full_moon",
+    "name": "滿月",
+    "emoji": "🌕",
+    "parents": "moon+moon"
+  },
+  {
+    "id": "solar_system",
+    "name": "太陽系",
+    "emoji": "🌞",
+    "parents": "planet+sun"
+  },
+  {
+    "id": "universe",
+    "name": "宇宙",
+    "emoji": "🌌",
+    "parents": "galaxy+galaxy"
+  },
+  {
+    "id": "ice_age",
+    "name": "冰河時代",
+    "emoji": "🧊",
+    "parents": "ice+time",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "rainforest",
+    "name": "雨林",
+    "emoji": "🌴",
+    "parents": "jungle+rain"
+  },
+  {
+    "id": "wildfire",
+    "name": "野火",
+    "emoji": "🔥",
+    "parents": "fire+forest"
+  },
+  {
+    "id": "crystal_cave",
+    "name": "水晶洞穴",
+    "emoji": "💎",
+    "parents": "cave+crystal",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "diamond_mine",
+    "name": "鑽石礦",
+    "emoji": "💎",
+    "parents": "crystal+mountain"
+  },
+  {
+    "id": "gold_mine",
+    "name": "金礦",
+    "emoji": "⛰️",
+    "parents": "gold+mountain"
+  },
+  {
+    "id": "coal_mine",
+    "name": "煤礦",
+    "emoji": "🪨",
+    "parents": "coal+mountain"
+  },
+  {
+    "id": "herd",
+    "name": "獸群",
+    "emoji": "🐘",
+    "parents": "animal+animal"
+  },
+  {
+    "id": "thick_fog",
+    "name": "濃霧",
+    "emoji": "🌫",
+    "parents": "fog+fog"
+  },
+  {
+    "id": "fog_machine",
+    "name": "造霧機",
+    "emoji": "💨",
+    "parents": "electricity+fog"
+  },
+  {
+    "id": "time_bomb",
+    "name": "定時炸彈",
+    "emoji": "💣",
+    "parents": "bomb+time"
+  },
+  {
+    "id": "bomb_shelter",
+    "name": "防空洞",
+    "emoji": "🛡",
+    "parents": "bomb+house"
+  },
+  {
+    "id": "monsoon_season",
+    "name": "雨季",
+    "emoji": "🌧",
+    "parents": "monsoon+time"
+  },
+  {
+    "id": "blacksmith_shop",
+    "name": "鐵匠鋪",
+    "emoji": "🛠",
+    "parents": "blacksmith+house"
+  },
+  {
+    "id": "ashtray",
+    "name": "煙灰缸",
+    "emoji": "🚬",
+    "parents": "cigarette+clay"
+  },
+  {
+    "id": "coffee_shop",
+    "name": "咖啡館",
+    "emoji": "☕",
+    "parents": "coffee+house"
+  },
+  {
+    "id": "coffee_maker",
+    "name": "咖啡機",
+    "emoji": "☕",
+    "parents": "coffee+electricity"
+  },
+  {
+    "id": "network_security",
+    "name": "網路安全",
+    "emoji": "🔒",
+    "parents": "firewall+internet"
+  },
+  {
+    "id": "rainbow_flag",
+    "name": "彩虹旗",
+    "emoji": "🌈",
+    "parents": "fabric+rainbow"
+  },
+  {
+    "id": "solar_energy",
+    "name": "太陽能",
+    "emoji": "⚡",
+    "parents": "solar_panel+sun"
+  },
+  {
+    "id": "tea_garden",
+    "name": "茶園",
+    "emoji": "🌱",
+    "parents": "field+tea"
+  },
+  {
+    "id": "wind_farm",
+    "name": "風電場",
+    "emoji": "🌬",
+    "parents": "field+wind_turbine"
+  },
+  {
+    "id": "renewable_energy",
+    "name": "可再生能源",
+    "emoji": "🔋",
+    "parents": "solar_panel+wind_turbine"
+  },
+  {
+    "id": "autumn_harvest",
+    "name": "秋收",
+    "emoji": "🌾",
+    "parents": "autumn+field"
+  },
+  {
+    "id": "autumn_leaves",
+    "name": "秋葉",
+    "emoji": "🍂",
+    "parents": "autumn+tree"
+  },
+  {
+    "id": "cactus_garden",
+    "name": "仙人掌花園",
+    "emoji": "🌵",
+    "parents": "cactus+garden"
+  },
+  {
+    "id": "cactus_flower",
+    "name": "仙人掌花",
+    "emoji": "🌺",
+    "parents": "cactus+flower"
+  },
+  {
+    "id": "galactic_empire",
+    "name": "銀河帝國",
+    "emoji": "👑",
+    "parents": "country+galaxy"
+  },
+  {
+    "id": "caramel_popcorn",
+    "name": "焦糖爆米花",
+    "emoji": "🍯",
+    "parents": "popcorn+caramel"
+  },
+  {
+    "id": "summer_vacation",
+    "name": "暑假",
+    "emoji": "🏖",
+    "parents": "summer+vacation"
+  },
+  {
+    "id": "summer_camp",
+    "name": "夏令營",
+    "emoji": "⛺",
+    "parents": "school+summer"
+  },
+  {
+    "id": "botanical_garden",
+    "name": "植物園",
+    "emoji": "🌿",
+    "parents": "garden+science"
+  },
+  {
+    "id": "planetarium",
+    "name": "天文館",
+    "emoji": "🔭",
+    "parents": "house+planet"
+  },
+  {
+    "id": "dna",
+    "name": "DNA",
+    "emoji": "🧬",
+    "parents": "code+human"
+  },
+  {
+    "id": "bed",
+    "name": "床",
+    "emoji": "🛏",
+    "parents": "fabric+wood"
+  },
+  {
+    "id": "twin_bed",
+    "name": "雙人床",
+    "emoji": "🛏",
+    "parents": "bed+bed"
+  },
+  {
+    "id": "bamboo",
+    "name": "竹子",
+    "emoji": "🎍",
+    "parents": "forest+plant"
+  },
+  {
+    "id": "panda",
+    "name": "熊貓",
+    "emoji": "🐼",
+    "parents": "animal+bamboo"
+  },
+  {
+    "id": "pig",
+    "name": "豬",
+    "emoji": "🐷",
+    "parents": "animal+mud"
+  },
+  {
+    "id": "flamingo",
+    "name": "火烈鳥",
+    "emoji": "🦩",
+    "parents": "bird+water"
+  },
+  {
+    "id": "great_pyramid",
+    "name": "胡夫金字塔",
+    "emoji": "🇪🇬",
+    "parents": "pyramid+time",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "taj_mahal",
+    "name": "泰姬陵",
+    "emoji": "🇮🇳",
+    "parents": "love+quartz",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "lighthouse_of_alexandria",
+    "name": "亞歷山大燈塔",
+    "emoji": "🇪🇬",
+    "parents": "city+lighthouse",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "president",
+    "name": "總統",
+    "emoji": "👔",
+    "parents": "country+human"
+  },
+  {
+    "id": "sydney_opera_house",
+    "name": "悉尼歌劇院",
+    "emoji": "🇦🇺",
+    "parents": "ocean+theater",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "albert_einstein",
+    "name": "阿爾伯特·愛因斯坦",
+    "emoji": "👨",
+    "parents": "relativity+scientist",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "composer",
+    "name": "作曲家",
+    "emoji": "🎼",
+    "parents": "musician+paper"
+  },
+  {
+    "id": "beethoven",
+    "name": "貝多芬",
+    "emoji": "🎵",
+    "parents": "composer+piano",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "inventor",
+    "name": "發明家",
+    "emoji": "🔧",
+    "parents": "scientist+tool"
+  },
+  {
+    "id": "jet_car",
+    "name": "噴氣式汽車",
+    "emoji": "🏎️",
+    "parents": "car+rocket"
+  },
+  {
+    "id": "pipe",
+    "name": "管子",
+    "emoji": "🪠",
+    "parents": "metal+water"
+  },
+  {
+    "id": "mushroom",
+    "name": "蘑菇",
+    "emoji": "🍄",
+    "parents": "rain+wood"
+  },
+  {
+    "id": "thread",
+    "name": "線",
+    "emoji": "🧵",
+    "parents": "shirt+tool"
+  },
+  {
+    "id": "web",
+    "name": "網",
+    "emoji": "🕸",
+    "parents": "thread+tool"
+  },
+  {
+    "id": "spider",
+    "name": "蜘蛛",
+    "emoji": "🕷",
+    "parents": "animal+web"
+  },
+  {
+    "id": "passion",
+    "name": "激情",
+    "emoji": "❤️",
+    "parents": "fire+love"
+  },
+  {
+    "id": "tango",
+    "name": "探戈",
+    "emoji": "💃",
+    "parents": "dance+passion"
+  },
+  {
+    "id": "hoop",
+    "name": "籃筐",
+    "emoji": "⭕",
+    "parents": "circle+metal"
+  },
+  {
+    "id": "basketball",
+    "name": "籃球",
+    "emoji": "🏀",
+    "parents": "ball+hoop"
+  },
+  {
+    "id": "park",
+    "name": "公園",
+    "emoji": "🏞",
+    "parents": "city+garden"
+  },
+  {
+    "id": "truth",
+    "name": "真相",
+    "emoji": "🔍",
+    "parents": "detective+philosophy"
+  },
+  {
+    "id": "moonwalk",
+    "name": "太空步",
+    "emoji": "🌙",
+    "parents": "dance+moon"
+  },
+  {
+    "id": "oil",
+    "name": "油",
+    "emoji": "🛢",
+    "parents": "fossil+pressure"
+  },
+  {
+    "id": "acid_rain",
+    "name": "酸雨",
+    "emoji": "🌧",
+    "parents": "pollution+rain"
+  },
+  {
+    "id": "plastic",
+    "name": "塑膠",
+    "emoji": "🥤",
+    "parents": "oil+science"
+  },
+  {
+    "id": "archipelago",
+    "name": "群島",
+    "emoji": "🏝",
+    "parents": "island+island"
+  },
+  {
+    "id": "land",
+    "name": "陸地",
+    "emoji": "🟫",
+    "parents": "earth+earth"
+  },
+  {
+    "id": "peninsula",
+    "name": "半島",
+    "emoji": "🗾",
+    "parents": "island+land"
+  },
+  {
+    "id": "atoll",
+    "name": "環礁",
+    "emoji": "🏝",
+    "parents": "coral+island"
+  },
+  {
+    "id": "continent",
+    "name": "大陸",
+    "emoji": "🗺",
+    "parents": "land+land"
+  },
+  {
+    "id": "plain",
+    "name": "平原",
+    "emoji": "🟩",
+    "parents": "field+field"
+  },
+  {
+    "id": "salt",
+    "name": "鹽",
+    "emoji": "🧂",
+    "parents": "sea+sun"
+  },
+  {
+    "id": "salt_lake",
+    "name": "鹽湖",
+    "emoji": "🏞",
+    "parents": "lake+salt",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "dead_sea",
+    "name": "死海",
+    "emoji": "🌊",
+    "parents": "salt_lake+sea",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "pickle",
+    "name": "醃菜",
+    "emoji": "🥒",
+    "parents": "salt+vegetable"
+  },
+  {
+    "id": "tunnel",
+    "name": "隧道",
+    "emoji": "🚇",
+    "parents": "mountain+road"
+  },
+  {
+    "id": "subway",
+    "name": "地鐵",
+    "emoji": "🚇",
+    "parents": "train+tunnel"
+  },
+  {
+    "id": "dam",
+    "name": "水壩",
+    "emoji": "🛑",
+    "parents": "river+wall"
+  },
+  {
+    "id": "reservoir",
+    "name": "水庫",
+    "emoji": "🏞",
+    "parents": "dam+lake"
+  },
+  {
+    "id": "grass",
+    "name": "草",
+    "emoji": "🌿",
+    "parents": "field+water"
+  },
+  {
+    "id": "horse",
+    "name": "馬",
+    "emoji": "🐎",
+    "parents": "animal+grass"
+  },
+  {
+    "id": "ink",
+    "name": "墨水",
+    "emoji": "🖊",
+    "parents": "coal+water"
+  },
+  {
+    "id": "pen",
+    "name": "鋼筆",
+    "emoji": "🖋",
+    "parents": "ink+metal"
+  },
+  {
+    "id": "silo",
+    "name": "筒倉",
+    "emoji": "🛖",
+    "parents": "house+wheat"
+  },
+  {
+    "id": "water_wheel",
+    "name": "水輪",
+    "emoji": "🎡",
+    "parents": "water+wheel"
+  },
+  {
+    "id": "mill",
+    "name": "磨坊",
+    "emoji": "🏚",
+    "parents": "house+water_wheel"
+  },
+  {
+    "id": "pond",
+    "name": "池塘",
+    "emoji": "🌊",
+    "parents": "garden+water"
+  },
+  {
+    "id": "evil",
+    "name": "惡魔",
+    "emoji": "😈",
+    "parents": "dark+heart"
+  },
+  {
+    "id": "villain",
+    "name": "反派",
+    "emoji": "🦹",
+    "parents": "evil+human"
+  },
+  {
+    "id": "multi_millionaire",
+    "name": "千萬富翁",
+    "emoji": "💵",
+    "parents": "millionaire+millionaire"
+  },
+  {
+    "id": "billionaire",
+    "name": "億萬富翁",
+    "emoji": "🤑",
+    "parents": "multi_millionaire+multi_millionaire"
+  },
+  {
+    "id": "meteorite",
+    "name": "隕石",
+    "emoji": "🪨",
+    "parents": "earth+meteor"
+  },
+  {
+    "id": "writer",
+    "name": "作家",
+    "emoji": "✍️",
+    "parents": "human+pen"
+  },
+  {
+    "id": "shakespeare",
+    "name": "莎士比亞",
+    "emoji": "📖",
+    "parents": "theater+writer",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "romeo_juliet",
+    "name": "羅密歐與朱麗葉",
+    "emoji": "💞",
+    "parents": "love+shakespeare",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "tragedy",
+    "name": "悲劇",
+    "emoji": "😢",
+    "parents": "death+story"
+  },
+  {
+    "id": "hamlet",
+    "name": "哈姆雷特",
+    "emoji": "👑",
+    "parents": "shakespeare+tragedy",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "caramel",
+    "name": "焦糖",
+    "emoji": "🍯",
+    "parents": "fire+sugar"
+  },
+  {
+    "id": "salted_caramel",
+    "name": "海鹽焦糖",
+    "emoji": "🍮",
+    "parents": "caramel+salt"
+  },
+  {
+    "id": "emotion",
+    "name": "情感",
+    "emoji": "💕",
+    "parents": "broken_heart+love"
+  },
+  {
+    "id": "poet",
+    "name": "詩人",
+    "emoji": "📝",
+    "parents": "emotion+writer"
+  },
+  {
+    "id": "nut",
+    "name": "堅果",
+    "emoji": "🥜",
+    "parents": "plant+tree"
+  },
+  {
+    "id": "mount_fuji",
+    "name": "富士山",
+    "emoji": "🇯🇵",
+    "parents": "cherry_blossom+mountain",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "rubber",
+    "name": "橡膠",
+    "emoji": "🛞",
+    "parents": "tool+tree"
+  },
+  {
+    "id": "balloon",
+    "name": "氣球",
+    "emoji": "🎈",
+    "parents": "air+rubber"
+  },
+  {
+    "id": "hot_air_balloon",
+    "name": "熱氣球",
+    "emoji": "🎈",
+    "parents": "balloon+fire"
+  },
+  {
+    "id": "air_bag",
+    "name": "安全氣囊",
+    "emoji": "💨",
+    "parents": "balloon+car"
+  },
+  {
+    "id": "goldfish",
+    "name": "金魚",
+    "emoji": "🐠",
+    "parents": "pond+fish"
+  },
+  {
+    "id": "concept",
+    "name": "概念",
+    "emoji": "💡",
+    "parents": "idea+philosophy"
+  },
+  {
+    "id": "hawaii",
+    "name": "夏威夷",
+    "emoji": "🏝",
+    "parents": "archipelago+volcano"
+  },
+  {
+    "id": "palm_tree",
+    "name": "棕櫚樹",
+    "emoji": "🥥",
+    "parents": "beach+tree"
+  },
+  {
+    "id": "coconut",
+    "name": "椰子",
+    "emoji": "🥥",
+    "parents": "fruit+palm_tree"
+  },
+  {
+    "id": "coconut_water",
+    "name": "椰子水",
+    "emoji": "🥥",
+    "parents": "coconut+water"
+  },
+  {
+    "id": "pineapple",
+    "name": "菠蘿",
+    "emoji": "🍍",
+    "parents": "fruit+sun"
+  },
+  {
+    "id": "hawaiian_pizza",
+    "name": "夏威夷比薩",
+    "emoji": "🍕",
+    "parents": "pineapple+pizza"
+  },
+  {
+    "id": "macadamia_nut",
+    "name": "澳洲堅果",
+    "emoji": "🥜",
+    "parents": "hawaii+nut"
+  },
+  {
+    "id": "cookie",
+    "name": "餅乾",
+    "emoji": "🍪",
+    "parents": "dough+sugar"
+  },
+  {
+    "id": "praline",
+    "name": "果仁糖",
+    "emoji": "🍬",
+    "parents": "nut+sugar"
+  },
+  {
+    "id": "almond_milk",
+    "name": "杏仁奶",
+    "emoji": "🥛",
+    "parents": "milk+nut"
+  },
+  {
+    "id": "astrology",
+    "name": "占星術",
+    "emoji": "🔮",
+    "parents": "constellation+philosophy"
+  },
+  {
+    "id": "zodiac",
+    "name": "十二星座",
+    "emoji": "♋",
+    "parents": "astrology+constellation"
+  },
+  {
+    "id": "yodeling",
+    "name": "約德爾唱法",
+    "emoji": "🎤",
+    "parents": "echo+music"
+  },
+  {
+    "id": "lunar_eclipse",
+    "name": "月食",
+    "emoji": "🌑",
+    "parents": "earth+full_moon"
+  },
+  {
+    "id": "moonlight_sonata",
+    "name": "月光奏鳴曲",
+    "emoji": "🎹",
+    "parents": "full_moon+music",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "barista",
+    "name": "咖啡師",
+    "emoji": "👨",
+    "parents": "coffee_maker+human"
+  },
+  {
+    "id": "london_bridge",
+    "name": "倫敦橋",
+    "emoji": "🇬🇧",
+    "parents": "bridge+thick_fog",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "hot_spring_resort",
+    "name": "溫泉度假村",
+    "emoji": "🏨",
+    "parents": "geyser+house"
+  },
+  {
+    "id": "gps_satellite",
+    "name": "GPS衞星",
+    "emoji": "🛰",
+    "parents": "map+satellite"
+  },
+  {
+    "id": "alarm_clock",
+    "name": "鬧鐘",
+    "emoji": "⏰",
+    "parents": "clock+sound"
+  },
+  {
+    "id": "disaster",
+    "name": "災難",
+    "emoji": "🌋",
+    "parents": "earthquake+tsunami"
+  },
+  {
+    "id": "ice_tea",
+    "name": "冰茶",
+    "emoji": "🥤",
+    "parents": "ice+tea"
+  },
+  {
+    "id": "nightclub",
+    "name": "夜總會",
+    "emoji": "🍸",
+    "parents": "dance+fog_machine"
+  },
+  {
+    "id": "number",
+    "name": "數字",
+    "emoji": "🔢",
+    "parents": "concept+time"
+  },
+  {
+    "id": "math",
+    "name": "數學",
+    "emoji": "📐",
+    "parents": "number+philosophy"
+  },
+  {
+    "id": "calculator",
+    "name": "計算器",
+    "emoji": "🧮",
+    "parents": "math+tool"
+  },
+  {
+    "id": "emperor",
+    "name": "皇帝",
+    "emoji": "👑",
+    "parents": "king+palace"
+  },
+  {
+    "id": "palace",
+    "name": "宮殿",
+    "emoji": "🏰",
+    "parents": "castle+gold"
+  },
+  {
+    "id": "bell",
+    "name": "鈴鐺",
+    "emoji": "🔔",
+    "parents": "metal+sound"
+  },
+  {
+    "id": "skyscraper",
+    "name": "摩天大樓",
+    "emoji": "🏙️",
+    "parents": "city+tower"
+  },
+  {
+    "id": "church",
+    "name": "教堂",
+    "emoji": "⛪",
+    "parents": "house+peace"
+  },
+  {
+    "id": "cathedral",
+    "name": "大教堂",
+    "emoji": "🕍",
+    "parents": "church+stone"
+  },
+  {
+    "id": "monk",
+    "name": "僧侶",
+    "emoji": "🧘",
+    "parents": "human+meditation"
+  },
+  {
+    "id": "fight",
+    "name": "戰鬥",
+    "emoji": "👊",
+    "parents": "emotion+evil"
+  },
+  {
+    "id": "war",
+    "name": "戰爭",
+    "emoji": "⚔️",
+    "parents": "fight+fight"
+  },
+  {
+    "id": "red",
+    "name": "紅色",
+    "emoji": "🔴",
+    "parents": "fire+blood"
+  },
+  {
+    "id": "gate",
+    "name": "大門",
+    "emoji": "⛩️",
+    "parents": "wall+garden"
+  },
+  {
+    "id": "forbidden_city",
+    "name": "故宮",
+    "emoji": "🇨🇳",
+    "parents": "castle+emperor",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "big_ben",
+    "name": "大本鐘",
+    "emoji": "🇬🇧",
+    "parents": "clock+bell",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "easter_island_moai",
+    "name": "復活節島摩艾像",
+    "emoji": "🗿",
+    "parents": "easter+stone",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "burj_khalifa",
+    "name": "哈利法塔",
+    "emoji": "🇦🇪",
+    "parents": "skyscraper+desert",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "parthenon",
+    "name": "帕特農神廟",
+    "emoji": "🇬🇷",
+    "parents": "ruins+philosophy",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "notre_dame",
+    "name": "巴黎聖母院",
+    "emoji": "🇫🇷",
+    "parents": "cathedral+river",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "kremlin",
+    "name": "克里姆林宮",
+    "emoji": "🇷🇺",
+    "parents": "castle+snow",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "angkor_wat",
+    "name": "吳哥窟",
+    "emoji": "🇰🇭",
+    "parents": "jungle+monk",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "terracotta_army",
+    "name": "兵馬俑",
+    "emoji": "🇨🇳",
+    "parents": "soldier+clay",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "tokyo_tower",
+    "name": "東京鐵塔",
+    "emoji": "🇯🇵",
+    "parents": "tower+red",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "itsukushima_gate",
+    "name": "嚴島神社鳥居",
+    "emoji": "🇯🇵",
+    "parents": "gate+ocean",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "n_seoul_tower",
+    "name": "南山首爾塔",
+    "emoji": "🇰🇷",
+    "parents": "tower+love",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "haeundae",
+    "name": "海雲臺",
+    "emoji": "🇰🇷",
+    "parents": "skyscraper+beach",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "hanok_village",
+    "name": "韓屋村",
+    "emoji": "🇰🇷",
+    "parents": "house+tradition",
+    "img": true,
+    "category": "world_wonders"
+  },
+  {
+    "id": "apple",
+    "name": "蘋果",
+    "emoji": "🍎",
+    "parents": "fruit+red"
+  },
+  {
+    "id": "sword",
+    "name": "劍",
+    "emoji": "🗡️",
+    "parents": "blade+metal"
+  },
+  {
+    "id": "warrior",
+    "name": "戰士",
+    "emoji": "⚔️",
+    "parents": "human+sword"
+  },
+  {
+    "id": "conqueror",
+    "name": "征服者",
+    "emoji": "🏇",
+    "parents": "warrior+map"
+  },
+  {
+    "id": "queen",
+    "name": "女王",
+    "emoji": "👸",
+    "parents": "king+dress"
+  },
+  {
+    "id": "radiation",
+    "name": "輻射",
+    "emoji": "☢️",
+    "parents": "energy+sickness"
+  },
+  {
+    "id": "question",
+    "name": "問題",
+    "emoji": "❓",
+    "parents": "philosophy+teacher"
+  },
+  {
+    "id": "thought",
+    "name": "思想",
+    "emoji": "💭",
+    "parents": "human+idea"
+  },
+  {
+    "id": "evolution",
+    "name": "進化",
+    "emoji": "🧬",
+    "parents": "dinosaur+time"
+  },
+  {
+    "id": "common_sunflower",
+    "name": "向日葵",
+    "emoji": "🌻",
+    "parents": "flower+sun"
+  },
+  {
+    "id": "faith",
+    "name": "信仰",
+    "emoji": "🙏",
+    "parents": "meditation+hope"
+  },
+  {
+    "id": "hope",
+    "name": "希望",
+    "emoji": "✨",
+    "parents": "dream+emotion"
+  },
+  {
+    "id": "genius",
+    "name": "天才",
+    "emoji": "🧠",
+    "parents": "albert_einstein+idea"
+  },
+  {
+    "id": "nature",
+    "name": "自然",
+    "emoji": "🌿",
+    "parents": "forest+mountain"
+  },
+  {
+    "id": "leonardo_da_vinci",
+    "name": "萊昂納多·達·芬奇",
+    "emoji": "🎨",
+    "parents": "art+science",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "isaac_newton",
+    "name": "艾薩克·牛頓",
+    "emoji": "🍎",
+    "parents": "apple+science",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "napoleon",
+    "name": "拿破崙",
+    "emoji": "⚔️",
+    "parents": "conqueror+map",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "confucius",
+    "name": "孔子",
+    "emoji": "📜",
+    "parents": "thought+teacher",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "marie_curie",
+    "name": "瑪麗·居里",
+    "emoji": "🧪",
+    "parents": "science+radiation",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "cleopatra",
+    "name": "埃及豔後",
+    "emoji": "👸",
+    "parents": "pyramid+queen",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "galileo_galilei",
+    "name": "伽利略·伽利萊",
+    "emoji": "🔭",
+    "parents": "telescope+scientist",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "socrates",
+    "name": "蘇格拉底",
+    "emoji": "🏛️",
+    "parents": "philosophy+question",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "charles_darwin",
+    "name": "查爾斯·達爾文",
+    "emoji": "🧬",
+    "parents": "evolution+thought",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "qin_shi_huang",
+    "name": "秦始皇",
+    "emoji": "👑",
+    "parents": "wall+king",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "alexander_great",
+    "name": "亞歷山大大帝",
+    "emoji": "🏇",
+    "parents": "conqueror+horse",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "vincent_van_gogh",
+    "name": "文森特·梵高",
+    "emoji": "🌻",
+    "parents": "common_sunflower+painter",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "abraham_lincoln",
+    "name": "亞伯拉罕·林肯",
+    "emoji": "🎩",
+    "parents": "freedom+president",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "mahatma_gandhi",
+    "name": "聖雄甘地",
+    "emoji": "👓",
+    "parents": "peace+conqueror",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "marco_polo",
+    "name": "馬可·波羅",
+    "emoji": "🗺️",
+    "parents": "explorer+book",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "christopher_columbus",
+    "name": "克里斯托弗·哥倫布",
+    "emoji": "⛵",
+    "parents": "explorer+map",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "joan_of_arc",
+    "name": "聖女貞德",
+    "emoji": "🛡️",
+    "parents": "warrior+faith",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "thomas_edison",
+    "name": "託馬斯·愛迪生",
+    "emoji": "💡",
+    "parents": "light+inventor",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "nikola_tesla",
+    "name": "尼古拉·特斯拉",
+    "emoji": "⚡",
+    "parents": "electricity+scientist",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "wolfgang_mozart",
+    "name": "沃爾夫岡·莫扎特",
+    "emoji": "🎹",
+    "parents": "genius+piano",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "stephen_hawking",
+    "name": "斯蒂芬·霍金",
+    "emoji": "🌌",
+    "parents": "universe+thought",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "turing",
+    "name": "圖靈",
+    "emoji": "💻",
+    "parents": "computer+scientist",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "archimedes",
+    "name": "阿基米德",
+    "emoji": "🛁",
+    "parents": "water+scientist",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "statue",
+    "name": "雕像",
+    "emoji": "🗿",
+    "parents": "stone+art"
+  },
+  {
+    "id": "michelangelo",
+    "name": "米開朗基羅",
+    "emoji": "🗿",
+    "parents": "statue+painter",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "lao_zi",
+    "name": "老子",
+    "emoji": "☯️",
+    "parents": "philosophy+nature",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "florence_nightingale",
+    "name": "弗洛倫斯·南丁格爾",
+    "emoji": "🕊️",
+    "parents": "doctor+light",
+    "img": true,
+    "category": "legendary_hall_of_fame"
+  },
+  {
+    "id": "swan",
+    "name": "天鵝",
+    "emoji": "🦢",
+    "parents": "bird+garden"
+  },
+  {
+    "id": "wing",
+    "name": "翅膀",
+    "emoji": "🪶",
+    "parents": "bird+air"
+  },
+  {
+    "id": "starry_night",
+    "name": "星空",
+    "emoji": "🌌",
+    "parents": "drawing+star",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "the_thinker",
+    "name": "思想者",
+    "emoji": "🗿",
+    "parents": "statue+philosophy",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "the_scream",
+    "name": "吶喊",
+    "emoji": "😱",
+    "parents": "drawing+fear",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "david_statue",
+    "name": "大衞像",
+    "emoji": "🗿",
+    "parents": "statue+hero",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "girl_pearl_earring",
+    "name": "戴珍珠耳環的少女",
+    "emoji": "👧",
+    "parents": "drawing+jewelry",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "american_gothic",
+    "name": "美國哥特式",
+    "emoji": "👨‍🌾",
+    "parents": "drawing+farmer",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "last_supper",
+    "name": "最後的晚餐",
+    "emoji": "🍞",
+    "parents": "drawing+bread",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "great_wave",
+    "name": "神奈川衝浪裡",
+    "emoji": "🌊",
+    "parents": "drawing+wave",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "swan_lake",
+    "name": "天鵝湖",
+    "emoji": "🩰",
+    "parents": "swan+music",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "liberty_leading_the_people",
+    "name": "自由引導人民",
+    "emoji": "🚩",
+    "parents": "drawing+freedom",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "the_son_of_man",
+    "name": "人類之子",
+    "emoji": "🍏",
+    "parents": "drawing+apple",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "birth_of_venus",
+    "name": "維納斯的誕生",
+    "emoji": "🐚",
+    "parents": "drawing+shell",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "the_night_watch",
+    "name": "夜巡",
+    "emoji": "🌑",
+    "parents": "drawing+dark",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "water_lilies",
+    "name": "睡蓮",
+    "emoji": "🪷",
+    "parents": "drawing+pond",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "vitruvian_man",
+    "name": "維特魯威人",
+    "emoji": "🤸",
+    "parents": "drawing+scientist",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "guernica",
+    "name": "格爾尼卡",
+    "emoji": "🐂",
+    "parents": "drawing+war",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "the_fifer",
+    "name": "吹笛少年",
+    "emoji": "🎺",
+    "parents": "drawing+pipe",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "winged_victory",
+    "name": "薩莫色雷斯的勝利女神",
+    "emoji": "🕊️",
+    "parents": "statue+wing",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "glacier",
+    "name": "冰川",
+    "emoji": "🧊",
+    "parents": "ice+mountain",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "blue_hole",
+    "name": "藍洞",
+    "emoji": "🌀",
+    "parents": "ocean+cave",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "stalactite",
+    "name": "鐘乳石",
+    "emoji": "💧",
+    "parents": "cave+water",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "solar_eclipse",
+    "name": "日食",
+    "emoji": "🌑",
+    "parents": "sun+moon",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "basalt_columns",
+    "name": "玄武岩柱",
+    "emoji": "🗿",
+    "parents": "volcano+ocean",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "blood_moon",
+    "name": "血月",
+    "emoji": "🌕",
+    "parents": "moon+red",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "oasis",
+    "name": "綠洲",
+    "emoji": "🌴",
+    "parents": "desert+water",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "geyser",
+    "name": "間歇泉",
+    "emoji": "♨️",
+    "parents": "volcano+water",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "fire_rainbow",
+    "name": "火彩虹",
+    "emoji": "🌈",
+    "parents": "cloud+rainbow",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "sand_dune",
+    "name": "沙丘",
+    "emoji": "🐫",
+    "parents": "sand+wind",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "bioluminescence",
+    "name": "生物發光",
+    "emoji": "✨",
+    "parents": "ocean+light",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "dough",
+    "name": "麵糰",
+    "emoji": "🥣",
+    "parents": "flour+water"
+  },
+  {
+    "id": "noodle",
+    "name": "麵條",
+    "emoji": "🍜",
+    "parents": "flour+soup"
+  },
+  {
+    "id": "spice",
+    "name": "香料",
+    "emoji": "🌶️",
+    "parents": "field+flower"
+  },
+  {
+    "id": "rice",
+    "name": "大米",
+    "emoji": "🌾",
+    "parents": "wheat+water"
+  },
+  {
+    "id": "potato",
+    "name": "土豆",
+    "emoji": "🥔",
+    "parents": "field+root"
+  },
+  {
+    "id": "root",
+    "name": "根",
+    "emoji": "🌱",
+    "parents": "seed+mud"
+  },
+  {
+    "id": "tomato",
+    "name": "西紅柿",
+    "emoji": "🍅",
+    "parents": "vegetable+red"
+  },
+  {
+    "id": "stick",
+    "name": "木棍",
+    "emoji": "🥢",
+    "parents": "wood+blade"
+  },
+  {
+    "id": "bean",
+    "name": "豆子",
+    "emoji": "🫘",
+    "parents": "seed+field"
+  },
+  {
+    "id": "pudding",
+    "name": "布丁",
+    "emoji": "🍮",
+    "parents": "milk+egg"
+  },
+  {
+    "id": "vanilla",
+    "name": "香草",
+    "emoji": "🌿",
+    "parents": "flower+sugar"
+  },
+  {
+    "id": "pizza",
+    "name": "比薩",
+    "emoji": "🍕",
+    "parents": "cheese+dough",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "ice_cream",
+    "name": "冰淇淋",
+    "emoji": "🍦",
+    "parents": "ice+milk",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "sushi",
+    "name": "壽司",
+    "emoji": "🍣",
+    "parents": "rice+fish",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "hamburger",
+    "name": "漢堡包",
+    "emoji": "🍔",
+    "parents": "cheese+sandwich",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "taco",
+    "name": "塔可",
+    "emoji": "🌮",
+    "parents": "corn+meat",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "ramen",
+    "name": "拉麵",
+    "emoji": "🍜",
+    "parents": "noodle+soup",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "croissant",
+    "name": "羊角麵包",
+    "emoji": "🥐",
+    "parents": "bread+butter",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "dim_sum",
+    "name": "點心",
+    "emoji": "🥟",
+    "parents": "steam+dough",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "pasta",
+    "name": "義大利麵",
+    "emoji": "🍝",
+    "parents": "noodle+tomato",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "curry",
+    "name": "咖哩",
+    "emoji": "🍛",
+    "parents": "spice+rice",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "kimchi",
+    "name": "泡菜",
+    "emoji": "🥬",
+    "parents": "vegetable+spice",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "milk_tea",
+    "name": "奶茶",
+    "emoji": "🧋",
+    "parents": "tea+milk",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "popcorn",
+    "name": "爆米花",
+    "emoji": "🍿",
+    "parents": "corn+fire",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "french_fries",
+    "name": "薯條",
+    "emoji": "🍟",
+    "parents": "potato+fire",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "sandwich",
+    "name": "三明治",
+    "emoji": "🥪",
+    "parents": "bread+meat",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "donut",
+    "name": "甜甜圈",
+    "emoji": "🍩",
+    "parents": "bread+circle",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "fish_and_chips",
+    "name": "炸魚薯條",
+    "emoji": "🐟",
+    "parents": "fish+french_fries",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "kebab",
+    "name": "烤肉串",
+    "emoji": "🥙",
+    "parents": "meat+stick",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "chocolate",
+    "name": "巧克力",
+    "emoji": "🍫",
+    "parents": "milk+sugar",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "tiramisu",
+    "name": "提拉米蘇",
+    "emoji": "🍰",
+    "parents": "cake+coffee",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "pancake",
+    "name": "薄煎餅",
+    "emoji": "🥞",
+    "parents": "egg+flour",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "macarons",
+    "name": "馬卡龍",
+    "emoji": "🧁",
+    "parents": "sugar+rainbow",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "takoyaki",
+    "name": "章魚燒",
+    "emoji": "🐙",
+    "parents": "octopus+dough",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "fondue",
+    "name": "芝士火鍋",
+    "emoji": "🫕",
+    "parents": "cheese+fire",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "miso_soup",
+    "name": "味噌湯",
+    "emoji": "🥣",
+    "parents": "soup+bean",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "hummus",
+    "name": "鷹嘴豆泥",
+    "emoji": "🧆",
+    "parents": "bean+oil",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "bibimbap",
+    "name": "石鍋拌飯",
+    "emoji": "🍲",
+    "parents": "rice+egg",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "mochi",
+    "name": "麻薯",
+    "emoji": "🍡",
+    "parents": "rice+hammer",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "egg_tart",
+    "name": "蛋撻",
+    "emoji": "🥧",
+    "parents": "egg+sugar",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "steak_tartar",
+    "name": "韃靼牛肉",
+    "emoji": "🥩",
+    "parents": "meat+egg",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "panna_cotta",
+    "name": "意式奶凍",
+    "emoji": "🍮",
+    "parents": "pudding+vanilla",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "mooncake",
+    "name": "月餅",
+    "emoji": "🥮",
+    "parents": "cake+moon",
+    "img": true,
+    "category": "global_gourmet"
+  },
+  {
+    "id": "gravity",
+    "name": "重力",
+    "emoji": "🍏",
+    "parents": "earth+apple",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "box",
+    "name": "盒子",
+    "emoji": "📦",
+    "parents": "paper+wood"
+  },
+  {
+    "id": "chaos",
+    "name": "混沌",
+    "emoji": "🌀",
+    "parents": "storm+explosion"
+  },
+  {
+    "id": "atom",
+    "name": "原子",
+    "emoji": "⚛️",
+    "parents": "science+metal"
+  },
+  {
+    "id": "big_bang",
+    "name": "大爆炸",
+    "emoji": "💥",
+    "parents": "universe+explosion",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "multiverse",
+    "name": "多元宇宙",
+    "emoji": "🌀",
+    "parents": "universe+universe",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "relativity",
+    "name": "相對論",
+    "emoji": "⌛",
+    "parents": "space+time",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "time_loop",
+    "name": "時間迴圈",
+    "emoji": "🔄",
+    "parents": "time+time",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "genetic_engineering",
+    "name": "基因工程",
+    "emoji": "🧬",
+    "parents": "dna+tool",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "eternal_life",
+    "name": "永生",
+    "emoji": "♾️",
+    "parents": "life+time",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "black_hole",
+    "name": "黑洞",
+    "emoji": "🕳️",
+    "parents": "star+pressure",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "string_theory",
+    "name": "弦理論",
+    "emoji": "🎻",
+    "parents": "universe+music",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "schrodinger_cat",
+    "name": "薛定諤的貓",
+    "emoji": "🐈",
+    "parents": "cat+box",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "turing_test",
+    "name": "圖靈測試",
+    "emoji": "💻",
+    "parents": "computer+thought",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "supernova",
+    "name": "超新星",
+    "emoji": "🌟",
+    "parents": "star+death",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "dark_matter",
+    "name": "暗物質",
+    "emoji": "🌑",
+    "parents": "universe+dark",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "pendulum",
+    "name": "鐘擺",
+    "emoji": "🕰️",
+    "parents": "gravity+time",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "golden_ratio",
+    "name": "黃金分割",
+    "emoji": "🐚",
+    "parents": "nature+math",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "paradox",
+    "name": "悖論",
+    "emoji": "❓",
+    "parents": "time+bug",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "radioactivity",
+    "name": "放射性",
+    "emoji": "☢️",
+    "parents": "metal+radiation",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "speed_of_light",
+    "name": "光速",
+    "emoji": "⚡",
+    "parents": "light+time",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "artificial_intelligence",
+    "name": "人工智慧",
+    "emoji": "🤖",
+    "parents": "code+life",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "dyson_sphere",
+    "name": "戴森球",
+    "emoji": "☀️",
+    "parents": "star+solar_panel",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "entropy",
+    "name": "熵",
+    "emoji": "🌡️",
+    "parents": "energy+chaos",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "wormhole",
+    "name": "蟲洞",
+    "emoji": "🌀",
+    "parents": "space+tunnel",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "dyson_swarm",
+    "name": "戴森群",
+    "emoji": "🛰️",
+    "parents": "satellite+sun",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "antimatter",
+    "name": "反物質",
+    "emoji": "⚛️",
+    "parents": "atom+explosion",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "butterfly_effect",
+    "name": "蝴蝶效應",
+    "emoji": "🦋",
+    "parents": "butterfly+storm",
+    "img": true,
+    "category": "truth_laboratory"
+  },
+  {
+    "id": "lizard",
+    "name": "蜥蜴",
+    "emoji": "🦎",
+    "parents": "animal+stone"
+  },
+  {
+    "id": "magic",
+    "name": "魔法",
+    "emoji": "🪄",
+    "parents": "dream+energy"
+  },
+  {
+    "id": "anger",
+    "name": "憤怒",
+    "emoji": "💢",
+    "parents": "emotion+fire"
+  },
+  {
+    "id": "phoenix",
+    "name": "鳳凰",
+    "emoji": "🔥",
+    "parents": "bird+fire",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "dragon",
+    "name": "龍",
+    "emoji": "🐉",
+    "parents": "lizard+fire",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "pegasus",
+    "name": "天馬",
+    "emoji": "🦄",
+    "parents": "horse+wing",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "excalibur",
+    "name": "石中劍",
+    "emoji": "🗡️",
+    "parents": "stone+sword",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "atlantis",
+    "name": "亞特蘭蒂斯",
+    "emoji": "🔱",
+    "parents": "city+sea",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "mjolnir",
+    "name": "雷神之錘",
+    "emoji": "🔨",
+    "parents": "hammer+lightning",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "unicorn",
+    "name": "獨角獸",
+    "emoji": "🦄",
+    "parents": "horse+magic",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "mermaid",
+    "name": "美人魚",
+    "emoji": "🧜‍♀️",
+    "parents": "human+fish",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "centaur",
+    "name": "人馬",
+    "emoji": "🏹",
+    "parents": "human+horse",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "sun_wukong",
+    "name": "孫悟空",
+    "emoji": "🐒",
+    "parents": "monkey+magic",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "poseidon",
+    "name": "波塞冬",
+    "emoji": "🔱",
+    "parents": "human+ocean",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "cupid",
+    "name": "丘位元",
+    "emoji": "💘",
+    "parents": "angel+love",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "zeus",
+    "name": "宙斯",
+    "emoji": "⚡",
+    "parents": "king+sky",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "hades",
+    "name": "哈迪斯",
+    "emoji": "💀",
+    "parents": "king+underworld",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "philosopher_stone",
+    "name": "魔法石",
+    "emoji": "💎",
+    "parents": "stone+magic",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "valkyrie",
+    "name": "女武神",
+    "emoji": "🛡️",
+    "parents": "angel+warrior",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "grimoire",
+    "name": "魔法書",
+    "emoji": "📜",
+    "parents": "book+magic",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "magic_carpet",
+    "name": "魔毯",
+    "emoji": "🧶",
+    "parents": "fabric+magic",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "ares",
+    "name": "阿瑞斯",
+    "emoji": "⚔️",
+    "parents": "warrior+anger",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "grave",
+    "name": "墳墓",
+    "emoji": "🪦",
+    "parents": "death+earth"
+  },
+  {
+    "id": "soul",
+    "name": "靈魂",
+    "emoji": "👻",
+    "parents": "life+death"
+  },
+  {
+    "id": "angel",
+    "name": "天使",
+    "emoji": "😇",
+    "parents": "soul+sky"
+  },
+  {
+    "id": "divine_comedy",
+    "name": "神曲",
+    "emoji": "⚖️",
+    "parents": "book+hell",
+    "img": true,
+    "category": "art_sanctuary"
+  },
+  {
+    "id": "qilin",
+    "name": "麒麟",
+    "emoji": "🦒",
+    "parents": "horse+rainbow",
+    "img": true,
+    "category": "myths_and_legends"
+  },
+  {
+    "id": "spaceship",
+    "name": "宇宙飛船",
+    "emoji": "🚀",
+    "parents": "rocket+space"
+  },
+  {
+    "id": "super_alloy",
+    "name": "超合金",
+    "emoji": "🛡️",
+    "parents": "metal+pressure",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "nuclear_reactor",
+    "name": "核反應堆",
+    "emoji": "☢️",
+    "parents": "radioactivity+energy",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "cyborg",
+    "name": "賽博格",
+    "emoji": "🦿",
+    "parents": "human+robot",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "terraforming",
+    "name": "地球化改造",
+    "emoji": "🌍",
+    "parents": "planet+tool",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "quantum_computer",
+    "name": "量子計算機",
+    "emoji": "💻",
+    "parents": "computer+atom",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "dark_matter_engine",
+    "name": "暗物質引擎",
+    "emoji": "🌌",
+    "parents": "rocket+black_hole",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "railgun",
+    "name": "電磁炮",
+    "emoji": "⚡",
+    "parents": "electricity+gun",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "cloth",
+    "name": "布料",
+    "emoji": "👕",
+    "parents": "fabric+fabric"
+  },
+  {
+    "id": "exoskeleton",
+    "name": "外骨骼",
+    "emoji": "🦾",
+    "parents": "armor+robot",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "mars",
+    "name": "火星",
+    "emoji": "🔴",
+    "parents": "planet+red"
+  },
+  {
+    "id": "smart_city",
+    "name": "智慧城市",
+    "emoji": "🏙️",
+    "parents": "city+artificial_intelligence",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "teleportation",
+    "name": "瞬間移動",
+    "emoji": "🌀",
+    "parents": "space+speed_of_light",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "interstellar_travel",
+    "name": "星際旅行",
+    "emoji": "🚀",
+    "parents": "spaceship+star",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "flying_car",
+    "name": "飛行汽車",
+    "emoji": "🚗",
+    "parents": "car+air",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "android",
+    "name": "仿生人",
+    "emoji": "👤",
+    "parents": "robot+life",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "time_machine",
+    "name": "時光機",
+    "emoji": "🕰️",
+    "parents": "metal+time",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "automated_farm",
+    "name": "自動化農場",
+    "emoji": "🌱",
+    "parents": "field+robot",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "warp_drive",
+    "name": "曲速引擎",
+    "emoji": "🌌",
+    "parents": "spaceship+speed_of_light",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "drone_swarm",
+    "name": "無人機群",
+    "emoji": "🐝",
+    "parents": "robot+bee",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "underwater_base",
+    "name": "水下基地",
+    "emoji": "🐚",
+    "parents": "house+ocean",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "graphene",
+    "name": "石墨烯",
+    "emoji": "⬢",
+    "parents": "pencil+science",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "wireless_power",
+    "name": "無線輸電",
+    "emoji": "📶",
+    "parents": "electricity+air",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "time_travel",
+    "name": "時空旅行",
+    "emoji": "🕰️",
+    "parents": "human+time_machine",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "mars_colony",
+    "name": "火星殖民地",
+    "emoji": "🚩",
+    "parents": "mars+city",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "nanobot",
+    "name": "奈米機器人",
+    "emoji": "🦠",
+    "parents": "graphene+robot",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "orbital_ring",
+    "name": "軌道環",
+    "emoji": "💍",
+    "parents": "planet+circle",
+    "img": true,
+    "category": "future_industries"
+  },
+  {
+    "id": "scythe",
+    "name": "鐮刀",
+    "emoji": "🌾",
+    "parents": "blade+grass"
+  },
+  {
+    "id": "underworld",
+    "name": "冥界",
+    "emoji": "👺",
+    "parents": "ghost+grave",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "hell",
+    "name": "地獄",
+    "emoji": "🔥",
+    "parents": "fire+underworld",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "vampire",
+    "name": "吸血鬼",
+    "emoji": "🧛",
+    "parents": "blood+human",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "zombie_apocalypse",
+    "name": "喪屍末日",
+    "emoji": "🧟",
+    "parents": "zombie+city",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "lovecraftian",
+    "name": "洛夫克拉夫特風格",
+    "emoji": "🐙",
+    "parents": "ocean+monster",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "doomsday",
+    "name": "末日",
+    "emoji": "☢️",
+    "parents": "disaster+disaster",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "pandora_box",
+    "name": "潘多拉魔盒",
+    "emoji": "🎁",
+    "parents": "box+evil",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "ghost_ship",
+    "name": "幽靈船",
+    "emoji": "🚢",
+    "parents": "ship+ghost",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "reaper",
+    "name": "死神",
+    "emoji": "💀",
+    "parents": "death+scythe",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "werewolf",
+    "name": "狼人",
+    "emoji": "🐺",
+    "parents": "animal+moon",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "mummy",
+    "name": "木乃伊",
+    "emoji": "🩹",
+    "parents": "death+pyramid",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "hydra",
+    "name": "九頭蛇",
+    "emoji": "🐍",
+    "parents": "snake+snake",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "kraken",
+    "name": "克拉肯",
+    "emoji": "🐙",
+    "parents": "monster+octopus",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "headless_horseman",
+    "name": "無頭騎士",
+    "emoji": "🏇",
+    "parents": "knight+ghost",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "slender_man",
+    "name": "瘦長鬼影",
+    "emoji": "🕴️",
+    "parents": "forest+monster",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "medusa",
+    "name": "美杜莎",
+    "emoji": "🐍",
+    "parents": "human+snake",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "cerberus",
+    "name": "地獄三頭犬",
+    "emoji": "🐕",
+    "parents": "dog+hell",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "necronomicon",
+    "name": "死靈之書",
+    "emoji": "📖",
+    "parents": "book+death",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "banshee",
+    "name": "報喪女妖",
+    "emoji": "👻",
+    "parents": "ghost+sound",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "curse",
+    "name": "詛咒",
+    "emoji": "🪄",
+    "parents": "evil+magic",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "voodoo_doll",
+    "name": "巫術娃娃",
+    "emoji": "🎎",
+    "parents": "fabric+curse",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "succubus",
+    "name": "魅魔",
+    "emoji": "😈",
+    "parents": "monster+love",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "witch_doctor",
+    "name": "巫醫",
+    "emoji": "👺",
+    "parents": "doctor+magic",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "jack_the_ripper",
+    "name": "開膛手傑克",
+    "emoji": "🔪",
+    "parents": "blade+thick_fog",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "krampus",
+    "name": "坎卜斯",
+    "emoji": "👹",
+    "parents": "evil+christmas",
+    "img": true,
+    "category": "nightfall_chronicles"
+  },
+  {
+    "id": "monster",
+    "name": "怪物",
+    "emoji": "👹",
+    "parents": "animal+evil"
+  },
+  {
+    "id": "snake",
+    "name": "蛇",
+    "emoji": "🐍",
+    "parents": "lizard+poison"
+  },
+  {
+    "id": "poison",
+    "name": "毒藥",
+    "emoji": "🧪",
+    "parents": "chemical+death"
+  },
+  {
+    "id": "chemical",
+    "name": "化學品",
+    "emoji": "🧪",
+    "parents": "water+science"
+  },
+  {
+    "id": "soldier",
+    "name": "士兵",
+    "emoji": "🪖",
+    "parents": "human+war"
+  },
+  {
+    "id": "fan",
+    "name": "風扇",
+    "emoji": "🚁",
+    "parents": "blade+electricity"
+  },
+  {
+    "id": "telescope",
+    "name": "望遠鏡",
+    "emoji": "🔭",
+    "parents": "glass+sky"
+  },
+  {
+    "id": "ball",
+    "name": "球",
+    "emoji": "⚽",
+    "parents": "rubber+circle"
+  },
+  {
+    "id": "tank",
+    "name": "坦克",
+    "emoji": "🎖️",
+    "parents": "car+gun",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "fighter_jet",
+    "name": "戰鬥機",
+    "emoji": "🎖️",
+    "parents": "airplane+war",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "aircraft_carrier",
+    "name": "航空母艦",
+    "emoji": "🎖️",
+    "parents": "ship+airplane",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "atomic_bomb",
+    "name": "原子彈",
+    "emoji": "🎖️",
+    "parents": "science+explosion",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "samurai",
+    "name": "武士",
+    "emoji": "🎖️",
+    "parents": "sun+knight",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "trojan_horse",
+    "name": "特洛伊木馬",
+    "emoji": "🎖️",
+    "parents": "wood+horse",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "submarine",
+    "name": "潛艇",
+    "emoji": "🎖️",
+    "parents": "boat+ocean",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "catapult",
+    "name": "投石機",
+    "emoji": "🎖️",
+    "parents": "stone+wood",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "viking",
+    "name": "維京人",
+    "emoji": "🎖️",
+    "parents": "warrior+ocean",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "viking_ship",
+    "name": "維京船",
+    "emoji": "🎖️",
+    "parents": "ship+viking",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "cannon",
+    "name": "大炮",
+    "emoji": "🎖️",
+    "parents": "gunpowder+pipe",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "nuclear_sub",
+    "name": "核潛艇",
+    "emoji": "🎖️",
+    "parents": "submarine+atomic_bomb",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "helicopter",
+    "name": "直升機",
+    "emoji": "🎖️",
+    "parents": "airplane+fan",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "sniper",
+    "name": "狙擊手",
+    "emoji": "🎖️",
+    "parents": "telescope+soldier",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "grenade",
+    "name": "手榴彈",
+    "emoji": "🎖️",
+    "parents": "explosion+ball",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "land_mine",
+    "name": "地雷",
+    "emoji": "🎖️",
+    "parents": "explosion+mud",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "fortress",
+    "name": "堡壘",
+    "emoji": "🎖️",
+    "parents": "castle+war",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "missile",
+    "name": "導彈",
+    "emoji": "🎖️",
+    "parents": "rocket+atomic_bomb",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "armor",
+    "name": "盔甲",
+    "emoji": "🎖️",
+    "parents": "fabric+metal",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "war_horse",
+    "name": "戰馬",
+    "emoji": "🎖️",
+    "parents": "horse+armor",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "chariot",
+    "name": "戰車",
+    "emoji": "🎖️",
+    "parents": "horse+wheel",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "navy_seal",
+    "name": "海豹突擊隊",
+    "emoji": "🎖️",
+    "parents": "soldier+ocean",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "trench",
+    "name": "戰壕",
+    "emoji": "🎖️",
+    "parents": "mud+soldier",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "musketeer",
+    "name": "火槍手",
+    "emoji": "🎖️",
+    "parents": "soldier+gunpowder",
+    "img": true,
+    "category": "war_and_iron"
+  },
+  {
+    "id": "circle",
+    "name": "圓",
+    "emoji": "⭕",
+    "parents": "stone+blade"
+  },
+  {
+    "id": "dinosaur",
+    "name": "恐龍",
+    "emoji": "🦕",
+    "parents": "fossil+time",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "tyrannosaurus",
+    "name": "霸王龍",
+    "emoji": "🦖",
+    "parents": "dinosaur+meat",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "brachiosaurus",
+    "name": "腕龍",
+    "emoji": "🦕",
+    "parents": "dinosaur+tree",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "stegosaurus",
+    "name": "劍龍",
+    "emoji": "🦕",
+    "parents": "dinosaur+blade",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "pterosaur",
+    "name": "翼龍",
+    "emoji": "🦕",
+    "parents": "dinosaur+wing",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "velociraptor",
+    "name": "伶盜龍",
+    "emoji": "🦕",
+    "parents": "dinosaur+wind",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "ankylosaurus",
+    "name": "甲龍",
+    "emoji": "🦕",
+    "parents": "dinosaur+armor",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "spinosaurus",
+    "name": "棘龍",
+    "emoji": "🦕",
+    "parents": "dinosaur+water",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "parasaurolophus",
+    "name": "副櫛龍",
+    "emoji": "🦕",
+    "parents": "dinosaur+music",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "plesiosaur",
+    "name": "蛇頸龍",
+    "emoji": "🦕",
+    "parents": "dinosaur+ocean",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "ichthyosaur",
+    "name": "魚龍",
+    "emoji": "🦕",
+    "parents": "dinosaur+fish",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "pachycephalosaur",
+    "name": "腫頭龍",
+    "emoji": "🦕",
+    "parents": "dinosaur+stone",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "archaeopteryx",
+    "name": "始祖鳥",
+    "emoji": "🕊️",
+    "parents": "dinosaur+bird",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "dino_egg",
+    "name": "恐龍蛋",
+    "emoji": "🥚",
+    "parents": "dinosaur+egg",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "amber",
+    "name": "琥珀",
+    "emoji": "💎",
+    "parents": "tree+pressure",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "mammoth",
+    "name": "猛獁象",
+    "emoji": "🦣",
+    "parents": "animal+ice_age",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "saber_toothed",
+    "name": "劍齒虎",
+    "emoji": "🐅",
+    "parents": "cat+ice_age",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "megalodon",
+    "name": "巨齒鯊",
+    "emoji": "🦈",
+    "parents": "shark+ancient",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "dodo",
+    "name": "渡渡鳥",
+    "emoji": "🦤",
+    "parents": "bird+death",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "caveman",
+    "name": "穴居人",
+    "emoji": "🍖",
+    "parents": "human+cave",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "cave_painting",
+    "name": "巖畫",
+    "emoji": "🎨",
+    "parents": "cave+art",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "trilobite",
+    "name": "三葉蟲",
+    "emoji": "🐚",
+    "parents": "shell+mud",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "terror_bird",
+    "name": "恐鳥",
+    "emoji": "🦅",
+    "parents": "bird+monster",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "extinction",
+    "name": "滅絕",
+    "emoji": "☄️",
+    "parents": "dinosaur+meteor",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "stone_tool",
+    "name": "石器",
+    "emoji": "🔪",
+    "parents": "caveman+stone",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "ammonite",
+    "name": "菊石",
+    "emoji": "🐚",
+    "parents": "shell+ancient",
+    "img": true,
+    "category": "prehistoric_gallery"
+  },
+  {
+    "id": "dragon_boat",
+    "name": "龍舟",
+    "emoji": "🚣",
+    "parents": "dragon+boat"
+  },
+  {
+    "id": "cherry_blossom",
+    "name": "櫻花",
+    "emoji": "🌸",
+    "parents": "flower+spring"
+  },
+  {
+    "id": "skeleton",
+    "name": "骨架",
+    "emoji": "💀",
+    "parents": "bone+bone"
+  },
+  {
+    "id": "christmas",
+    "name": "聖誕節",
+    "emoji": "🎄",
+    "parents": "christmas_tree+santa",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "halloween",
+    "name": "萬聖節",
+    "emoji": "🎃",
+    "parents": "pumpkin+ghost",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "thanksgiving",
+    "name": "感恩節",
+    "emoji": "🦃",
+    "parents": "autumn_harvest+bird",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "spring_festival",
+    "name": "春節",
+    "emoji": "🧧",
+    "parents": "fireworks+family",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "lantern_festival",
+    "name": "元宵節",
+    "emoji": "🏮",
+    "parents": "light+moon",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "dragon_boat_fest",
+    "name": "端午節",
+    "emoji": "🚣",
+    "parents": "dragon_boat+river",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "mid_autumn_fest",
+    "name": "中秋節",
+    "emoji": "🥮",
+    "parents": "full_moon+rabbit",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "carnival_rio",
+    "name": "裡約狂歡節",
+    "emoji": "💃",
+    "parents": "dance+party",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "oktoberfest",
+    "name": "慕尼黑啤酒節",
+    "emoji": "🍺",
+    "parents": "beer+party",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "diwali",
+    "name": "排燈節",
+    "emoji": "🪔",
+    "parents": "light+oil",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "day_of_dead",
+    "name": "亡靈節",
+    "emoji": "💀",
+    "parents": "flower+skeleton",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "songkran",
+    "name": "潑水節",
+    "emoji": "🔫",
+    "parents": "party+water",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "qingming_festival",
+    "name": "清明節",
+    "emoji": "🌱",
+    "parents": "rain+grave",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "hanami",
+    "name": "花見",
+    "emoji": "🌸",
+    "parents": "cherry_blossom+picnic",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "tanabata",
+    "name": "七夕",
+    "emoji": "🎋",
+    "parents": "galaxy+love",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "holi",
+    "name": "灑紅節",
+    "emoji": "🎨",
+    "parents": "rainbow+spring",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "setsubun",
+    "name": "節分",
+    "emoji": "👹",
+    "parents": "bean+monster",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "loy_krathong",
+    "name": "水燈節",
+    "emoji": "🕯️",
+    "parents": "flower+river",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "boryeong_mud",
+    "name": "保寧泥漿節",
+    "emoji": "🎉",
+    "parents": "mud+party",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "valentines_day",
+    "name": "情人節",
+    "emoji": "💘",
+    "parents": "flower+chocolate",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "picnic",
+    "name": "野餐",
+    "emoji": "🧺",
+    "parents": "garden+blanket"
+  },
+  {
+    "id": "alcohol",
+    "name": "酒精",
+    "emoji": "🧪",
+    "parents": "wine+fire"
+  },
+  {
+    "id": "beer",
+    "name": "啤酒",
+    "emoji": "🍺",
+    "parents": "wheat+alcohol"
+  },
+  {
+    "id": "blanket",
+    "name": "毯子",
+    "emoji": "🧺",
+    "parents": "cloth+wool"
+  },
+  {
+    "id": "easter",
+    "name": "復活節",
+    "emoji": "🐰",
+    "parents": "egg+rabbit",
+    "img": true,
+    "category": "world_festivals"
+  },
+  {
+    "id": "crop_circle",
+    "name": "麥田怪圈",
+    "emoji": "🌾",
+    "parents": "alien+field"
+  },
+  {
+    "id": "veterinarian",
+    "name": "獸醫",
+    "emoji": "🩺",
+    "parents": "animal+doctor"
+  },
+  {
+    "id": "taxidermy",
+    "name": "標本剝製術",
+    "emoji": "🏺",
+    "parents": "animal+death"
+  },
+  {
+    "id": "apple_pie",
+    "name": "蘋果派",
+    "emoji": "🥧",
+    "parents": "apple+bread"
+  },
+  {
+    "id": "mythology",
+    "name": "神話",
+    "emoji": "🔱",
+    "parents": "ancient+story"
+  },
+  {
+    "id": "relic",
+    "name": "聖物",
+    "emoji": "🏺",
+    "parents": "ancient+treasure"
+  },
+  {
+    "id": "forgery",
+    "name": "偽造品",
+    "emoji": "🎨",
+    "parents": "art+evil"
+  },
+  {
+    "id": "zero_gravity",
+    "name": "失重",
+    "emoji": "☁️",
+    "parents": "astronaut+space"
+  },
+  {
+    "id": "moon_landing",
+    "name": "登月",
+    "emoji": "🚩",
+    "parents": "astronaut+moon"
+  },
+  {
+    "id": "nuclear_fission",
+    "name": "核裂變",
+    "emoji": "💥",
+    "parents": "atom+blade"
+  },
+  {
+    "id": "molecule",
+    "name": "分子",
+    "emoji": "🧪",
+    "parents": "atom+atom"
+  },
+  {
+    "id": "particle_accelerator",
+    "name": "粒子加速器",
+    "emoji": "🌀",
+    "parents": "atom+tunnel"
+  },
+  {
+    "id": "periodic_table",
+    "name": "元素週期表",
+    "emoji": "📊",
+    "parents": "atom+paper"
+  },
+  {
+    "id": "voice_actor",
+    "name": "配音演員",
+    "emoji": "🎙️",
+    "parents": "actor+sound"
+  },
+  {
+    "id": "paparazzi",
+    "name": "狗仔隊",
+    "emoji": "📸",
+    "parents": "actor+camera"
+  },
+  {
+    "id": "smart_home",
+    "name": "智慧家居",
+    "emoji": "🏠",
+    "parents": "ai+house"
+  },
+  {
+    "id": "wind_tunnel",
+    "name": "風洞",
+    "emoji": "🌀",
+    "parents": "air+tunnel"
+  },
+  {
+    "id": "scuba_tank",
+    "name": "潛水氣瓶",
+    "emoji": "🤿",
+    "parents": "air+can"
+  },
+  {
+    "id": "vacuum",
+    "name": "真空",
+    "emoji": "🕳️",
+    "parents": "air+death"
+  },
+  {
+    "id": "parachuting",
+    "name": "跳傘",
+    "emoji": "🪂",
+    "parents": "airplane+umbrella"
+  },
+  {
+    "id": "autopilot",
+    "name": "自動駕駛",
+    "emoji": "🤖",
+    "parents": "airplane+ai"
+  },
+  {
+    "id": "cocktail",
+    "name": "雞尾酒",
+    "emoji": "🍸",
+    "parents": "alcohol+juice"
+  },
+  {
+    "id": "molotov_cocktail",
+    "name": "燃燒瓶",
+    "emoji": "🔥",
+    "parents": "alcohol+explosion"
+  },
+  {
+    "id": "disinfectant",
+    "name": "消毒劑",
+    "emoji": "🧼",
+    "parents": "alcohol+hospital"
+  },
+  {
+    "id": "perfume",
+    "name": "香水",
+    "emoji": "🧪",
+    "parents": "alcohol+flower"
+  },
+  {
+    "id": "smoked_meat",
+    "name": "燻肉",
+    "emoji": "💨",
+    "parents": "bacon+smoke"
+  },
+  {
+    "id": "yogurt",
+    "name": "酸奶",
+    "emoji": "🥛",
+    "parents": "bacteria+milk"
+  },
+  {
+    "id": "antibiotics",
+    "name": "抗生素",
+    "emoji": "💊",
+    "parents": "bacteria+medicine"
+  },
+  {
+    "id": "pastry",
+    "name": "油酥點心",
+    "emoji": "🥐",
+    "parents": "baker+sugar"
+  },
+  {
+    "id": "billiards",
+    "name": "枱球",
+    "emoji": "🎱",
+    "parents": "ball+stick"
+  },
+  {
+    "id": "helium",
+    "name": "氦氣",
+    "emoji": "🎈",
+    "parents": "balloon+science"
+  },
+  {
+    "id": "panda_food",
+    "name": "熊貓食物",
+    "emoji": "🎋",
+    "parents": "bamboo+panda"
+  },
+  {
+    "id": "banana_split",
+    "name": "香蕉船",
+    "emoji": "🍨",
+    "parents": "banana+ice_cream"
+  },
+  {
+    "id": "vault",
+    "name": "金庫",
+    "emoji": "🔒",
+    "parents": "bank+metal"
+  },
+  {
+    "id": "atm",
+    "name": "自動取款機",
+    "emoji": "🏧",
+    "parents": "bank+computer"
+  },
+  {
+    "id": "jersey",
+    "name": "運動衫",
+    "emoji": "🎽",
+    "parents": "basketball+shirt"
+  },
+  {
+    "id": "electric_car",
+    "name": "電動汽車",
+    "emoji": "🚗",
+    "parents": "battery+car"
+  },
+  {
+    "id": "rechargeable",
+    "name": "可充電",
+    "emoji": "♻️",
+    "parents": "battery+recycling"
+  },
+  {
+    "id": "power_bank",
+    "name": "充電寶",
+    "emoji": "🔋",
+    "parents": "battery+box"
+  },
+  {
+    "id": "beach_volleyball",
+    "name": "沙灘排球",
+    "emoji": "🏐",
+    "parents": "beach+ball"
+  },
+  {
+    "id": "tofu",
+    "name": "豆腐",
+    "emoji": "🧊",
+    "parents": "bean+water"
+  },
+  {
+    "id": "soy_sauce",
+    "name": "醬油",
+    "emoji": "🧴",
+    "parents": "bean+salt"
+  },
+  {
+    "id": "beanstalk",
+    "name": "豆莖",
+    "emoji": "🌱",
+    "parents": "bean+sky"
+  },
+  {
+    "id": "nightmare",
+    "name": "噩夢",
+    "emoji": "👹",
+    "parents": "bed+ghost"
+  },
+  {
+    "id": "honeycomb",
+    "name": "蜂巢",
+    "emoji": "🐝",
+    "parents": "bee+wax"
+  },
+  {
+    "id": "pub",
+    "name": "酒館",
+    "emoji": "🍺",
+    "parents": "beer+house"
+  },
+  {
+    "id": "tricycle",
+    "name": "三輪車",
+    "emoji": "🚲",
+    "parents": "bicycle+wheel"
+  },
+  {
+    "id": "motorcycle",
+    "name": "摩托車",
+    "emoji": "🏍️",
+    "parents": "bicycle+engine"
+  },
+  {
+    "id": "nest",
+    "name": "鳥巢",
+    "emoji": "🪺",
+    "parents": "bird+house"
+  },
+  {
+    "id": "horseshoes",
+    "name": "馬蹄鐵",
+    "emoji": "👟",
+    "parents": "blacksmith+horse"
+  },
+  {
+    "id": "e_book",
+    "name": "電子書",
+    "emoji": "📱",
+    "parents": "book+computer"
+  },
+  {
+    "id": "tequila",
+    "name": "龍舌蘭酒",
+    "emoji": "🥃",
+    "parents": "cactus+alcohol"
+  },
+  {
+    "id": "lens",
+    "name": "鏡頭",
+    "emoji": "🔍",
+    "parents": "camera+glass"
+  },
+  {
+    "id": "candlelight_dinner",
+    "name": "燭光晚餐",
+    "emoji": "🕯️",
+    "parents": "candle+romance"
+  },
+  {
+    "id": "poker_chip",
+    "name": "籌碼",
+    "emoji": "🪙",
+    "parents": "casino+circle"
+  },
+  {
+    "id": "bat",
+    "name": "蝙蝠",
+    "emoji": "🦇",
+    "parents": "cave+bird"
+  },
+  {
+    "id": "mac_and_cheese",
+    "name": "芝士通心粉",
+    "emoji": "🧀",
+    "parents": "cheese+pasta"
+  },
+  {
+    "id": "recipe",
+    "name": "食譜",
+    "emoji": "📜",
+    "parents": "chef+paper"
+  },
+  {
+    "id": "truffle",
+    "name": "松露",
+    "emoji": "🍄",
+    "parents": "chocolate+mushroom"
+  },
+  {
+    "id": "cuckoo_clock",
+    "name": "布穀鳥鐘",
+    "emoji": "🐦",
+    "parents": "clock+bird"
+  },
+  {
+    "id": "curtain",
+    "name": "窗簾",
+    "emoji": "🎭",
+    "parents": "cloth+theater"
+  },
+  {
+    "id": "cappuccino",
+    "name": "卡布奇諾",
+    "emoji": "☕",
+    "parents": "coffee+milk"
+  },
+  {
+    "id": "stardust",
+    "name": "星塵",
+    "emoji": "✨",
+    "parents": "comet+dust"
+  },
+  {
+    "id": "disco",
+    "name": "迪斯科",
+    "emoji": "🪩",
+    "parents": "dance+nightclub"
+  },
+  {
+    "id": "dark_forest",
+    "name": "黑暗森林",
+    "emoji": "🌲",
+    "parents": "dark+forest"
+  },
+  {
+    "id": "mirage_effect",
+    "name": "海市蜃樓效應",
+    "emoji": "🌫️",
+    "parents": "desert+illusion"
+  },
+  {
+    "id": "clue",
+    "name": "線索",
+    "emoji": "🔍",
+    "parents": "detective+idea"
+  },
+  {
+    "id": "cloning",
+    "name": "克隆",
+    "emoji": "👥",
+    "parents": "dna+factory"
+  },
+  {
+    "id": "stethoscope",
+    "name": "聽診器",
+    "emoji": "🩺",
+    "parents": "doctor+sound"
+  },
+  {
+    "id": "prescription",
+    "name": "處方",
+    "emoji": "💊",
+    "parents": "doctor+paper"
+  },
+  {
+    "id": "dragon_scale",
+    "name": "龍鱗",
+    "emoji": "🛡️",
+    "parents": "dragon+armor"
+  },
+  {
+    "id": "vacuum_cleaner",
+    "name": "吸塵器",
+    "emoji": "🧹",
+    "parents": "dust+electricity"
+  },
+  {
+    "id": "omelette",
+    "name": "歐姆蛋",
+    "emoji": "🍳",
+    "parents": "egg+fire"
+  },
+  {
+    "id": "mayonnaise",
+    "name": "蛋黃醬",
+    "emoji": "🧴",
+    "parents": "egg+oil"
+  },
+  {
+    "id": "milky_way",
+    "name": "銀河",
+    "emoji": "🌌",
+    "parents": "galaxy+earth",
+    "img": true,
+    "category": "natural_marvels"
+  },
+  {
+    "id": "insanity",
+    "name": "瘋狂",
+    "emoji": "🌀",
+    "parents": "genius+chaos"
+  },
+  {
+    "id": "alchemy",
+    "name": "鍊金術",
+    "emoji": "⚗️",
+    "parents": "gold+magic"
+  },
+  {
+    "id": "rock_and_roll",
+    "name": "搖滾樂",
+    "emoji": "🎸",
+    "parents": "guitar+explosion"
+  },
+  {
+    "id": "sundae",
+    "name": "聖代",
+    "emoji": "🍨",
+    "parents": "ice_cream+fruit"
+  },
+  {
+    "id": "post_office",
+    "name": "郵局",
+    "emoji": "🏤",
+    "parents": "letter+house"
+  },
+  {
+    "id": "love_letter",
+    "name": "情書",
+    "emoji": "💌",
+    "parents": "letter+love"
+  },
+  {
+    "id": "abyss",
+    "name": "深淵",
+    "emoji": "🕳️",
+    "parents": "ocean+dark"
+  },
+  {
+    "id": "photo_album",
+    "name": "相簿",
+    "emoji": "📖",
+    "parents": "photo+family"
+  },
+  {
+    "id": "treasure_chest",
+    "name": "寶箱",
+    "emoji": "🪙",
+    "parents": "pirate+gold"
+  },
+  {
+    "id": "wedding_ring",
+    "name": "結婚戒指",
+    "emoji": "💍",
+    "parents": "romance+ring"
+  },
+  {
+    "id": "sandstone",
+    "name": "砂岩",
+    "emoji": "🧱",
+    "parents": "sand+stone"
+  },
+  {
+    "id": "tea_ceremony",
+    "name": "茶道",
+    "emoji": "🍵",
+    "parents": "tea+tradition"
+  },
+  {
+    "id": "coastal_line",
+    "name": "海岸線",
+    "emoji": "🏖️",
+    "parents": "continent+ocean"
+  },
+  {
+    "id": "wind_vortex",
+    "name": "風渦",
+    "emoji": "🌀",
+    "parents": "tornado+air"
+  },
+  {
+    "id": "no_mans_land",
+    "name": "無人區",
+    "emoji": "💀",
+    "parents": "land_mine+war"
+  },
+  {
+    "id": "photovoltaic_cell",
+    "name": "光伏電池",
+    "emoji": "🔋",
+    "parents": "solar_energy+electricity"
+  },
+  {
+    "id": "robot_vacuum",
+    "name": "掃地機器人",
+    "emoji": "🤖",
+    "parents": "vacuum_cleaner+robot"
+  },
+  {
+    "id": "tesla_coil",
+    "name": "特斯拉線圈",
+    "emoji": "🌩️",
+    "parents": "wireless_power+electricity"
+  },
+  {
+    "id": "berry_compote",
+    "name": "漿果蜜餞",
+    "emoji": "🍓",
+    "parents": "jam+fruit"
+  },
+  {
+    "id": "ice_storm",
+    "name": "冰暴",
+    "emoji": "❄️",
+    "parents": "hail+wind"
+  },
+  {
+    "id": "eyeglass_frame",
+    "name": "眼鏡框",
+    "emoji": "👓",
+    "parents": "lens+metal"
+  },
+  {
+    "id": "black_stone",
+    "name": "黑石",
+    "emoji": "🪨",
+    "parents": "meteorite+dark"
+  },
+  {
+    "id": "petri_dish",
+    "name": "培養皿",
+    "emoji": "🧫",
+    "parents": "bacteria+glass"
+  },
+  {
+    "id": "abacus",
+    "name": "算盤",
+    "emoji": "🧮",
+    "parents": "math+wood"
+  },
+  {
+    "id": "erosion_cave",
+    "name": "侵蝕洞穴",
+    "emoji": "🕳",
+    "parents": "coastal_line+time"
+  },
+  {
+    "id": "desert_sculpture",
+    "name": "沙漠雕塑",
+    "emoji": "🗿",
+    "parents": "sandstone+wind"
+  },
+  {
+    "id": "dust_devil",
+    "name": "塵捲風",
+    "emoji": "🌪",
+    "parents": "desert+wind_vortex"
+  },
+  {
+    "id": "keyboard_warrior",
+    "name": "鍵盤俠",
+    "emoji": "⌨️",
+    "parents": "internet+sword"
+  },
+  {
+    "id": "origami_crane",
+    "name": "摺紙鶴",
+    "emoji": "🦢",
+    "parents": "bird+paper"
+  },
+  {
+    "id": "message_in_bottle",
+    "name": "漂流瓶",
+    "emoji": "🍾",
+    "parents": "glass+letter"
+  },
+  {
+    "id": "vacuum_flask",
+    "name": "保溫瓶",
+    "emoji": "🍶",
+    "parents": "glass+vacuum"
+  },
+  {
+    "id": "black_market",
+    "name": "黑市",
+    "emoji": "🕶",
+    "parents": "dark+money"
+  }
+]

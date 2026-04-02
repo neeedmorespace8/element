@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>迷你合成實驗室 - 專業通知版</title>
+    <style>
+        body { font-family: "微軟正黑體", sans-serif; display: flex; flex-direction: column; align-items: center; background: #f4f4f9; padding: 20px; margin: 0; }
+        h1 { color: #188038; margin-bottom: 5px; }
+        
+        #toolbar { width: 80%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .btn { padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 8px; border: 1px solid #188038; background: #188038; color: white; font-weight: bold; transition: 0.2s; }
+        .btn:hover { background: #0e4c21; transform: scale(1.05); }
+
+        #inventory { display: flex; gap: 10px; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); flex-wrap: wrap; width: 80%; justify-content: center; min-height: 40px; box-sizing: border-box; margin-bottom: 20px;}
+        #board { width: 80%; height: 500px; background: white; border: 3px dashed #ccc; border-radius: 8px; position: relative; overflow: hidden; box-sizing: border-box; }
+        
+        .element { padding: 10px 15px; background: #0078d5; color: white; border-radius: 20px; cursor: grab; user-select: none; position: absolute; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: transform 0.1s; }
+        .element:active { cursor: grabbing; transform: scale(1.1); }
+        .inventory-item { padding: 10px 15px; background: #188038; color: white; border-radius: 20px; cursor: grab; user-select: none; }
+
+        /* 圖鑑彈出視窗樣式 */
+        #gallery-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(3px); }
+        #gallery-content { background: white; width: 80%; max-width: 700px; height: 70vh; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        #close-btn { position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; border: none; background: none; color: #666; }
+        #close-btn:hover { color: #000; }
+        .gallery-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
+        .gallery-header h2 { margin: 0; color: #333; }
+        #gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 15px; overflow-y: auto; padding-right: 10px; align-content: start; }
+        .gallery-item { display: flex; flex-direction: column; align-items: center; padding: 15px 5px; border-radius: 10px; border: 2px solid transparent; background: #f9f9f9; transition: 0.3s; }
+        .gallery-emoji { font-size: 32px; margin-bottom: 8px; }
+        .gallery-name { font-size: 14px; font-weight: bold; text-align: center; }
+        .gallery-item.unlocked { background: #e8f5e9; border-color: #188038; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .gallery-item.unlocked .gallery-name { color: #188038; }
+        .gallery-item.locked { background: #eee; border-color: #ddd; }
+        .gallery-item.locked .gallery-emoji { filter: grayscale(100%) opacity(0.2); }
+        .gallery-item.locked .gallery-name { color: #999; }
+
+        /* ======== 新增：浮動通知 (Toast) 樣式 ======== */
+        #toast-container {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 2000;
+            pointer-events: none; /* 讓滑鼠點擊可以穿透它，不影響遊戲操作 */
+        }
+        .toast {
+            background: #218838;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            /* 讓它有浮現並在幾秒後消失的動畫 */
+            animation: slideFadeInOut 3s ease-in-out forwards;
+        }
+        @keyframes slideFadeInOut {
+            0% { opacity: 0; transform: translateY(30px) scale(0.9); }
+            10% { opacity: 1; transform: translateY(0) scale(1); }
+            85% { opacity: 1; transform: translateY(0) scale(1); }
+            100% { opacity: 0; transform: translateY(-20px) scale(0.9); }
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 迷你合成實驗室</h1>
+    
+    <div id="toolbar">
+        <span>拖曳元素互相重疊來合成新物品！</span>
+        <button class="btn" id="open-gallery-btn">🏆 查看圖鑑 (<span id="progress-text">0/0</span>)</button>
+    </div>
+
+    <div id="inventory"></div>
+    <div id="board"></div>
+
+    <div id="gallery-modal">
+        <div id="gallery-content">
+            <button id="close-btn">&times;</button>
+            <div class="gallery-header">
+                <h2>📖 造物圖鑑</h2>
+                <h3 id="modal-progress-text">進度：0 / 0</h3>
+            </div>
+            <div id="gallery-grid"></div>
+        </div>
+    </div>
+
+    <!-- 新增：浮動通知的容器 -->
+    <div id="toast-container"></div>
+
+    <script>
+        // ======== 1. 建立原汁原味的 Config 設定檔 ========
+        window.iconCraftConfig = {
+            gameUi: {
+                newElementDiscovered: "你發現了一個新元素！",
+                epicItemFound: "解鎖史詩級物品",
+                allLevelsCompleted: "神蹟！你已發現所有元素！"
+            }
+        };
+
+        // ======== 2. 建立 Toast 浮動通知系統 ========
+        function showToast(message) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerText = message;
+            
+            container.appendChild(toast);
+            
+            // 動畫總共 3 秒，3 秒後把這個元素從網頁上徹底刪除，以免塞滿記憶體
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+
+        // 以下為遊戲核心邏輯
+        let elementsDb = {}; 
+        let recipes = {};    
+        const unlockedElements = new Set(["water", "fire", "earth", "air"]);
+        
+        const inventoryDiv = document.getElementById('inventory');
+        const boardDiv = document.getElementById('board');
+        const galleryModal = document.getElementById('gallery-modal');
+        const galleryGrid = document.getElementById('gallery-grid');
+        const progressText = document.getElementById('progress-text');
+        const modalProgressText = document.getElementById('modal-progress-text');
+
+        async function loadRecipes() {
+            try {
+                const response = await fetch('recipes.json');
+                const rawData = await response.json();
+
+                rawData.forEach(item => {
+                    elementsDb[item.id] = item;
+                    if (item.parents && item.parents !== "") {
+                        const recipeKey = item.parents.split('+').sort().join('+');
+                        recipes[recipeKey] = item.id;
+                    }
+                });
+
+                renderInventory();
+                updateProgress(); 
+            } catch (error) {
+                console.error("載入配方失敗：", error);
+            }
+        }
+
+        function updateProgress() {
+            const total = Object.keys(elementsDb).length;
+            const current = unlockedElements.size;
+            const text = `${current} / ${total}`;
+            progressText.innerText = text;
+            modalProgressText.innerText = `收集進度：${text}`;
+        }
+
+        function renderInventory() {
+            inventoryDiv.innerHTML = '';
+            unlockedElements.forEach(id => {
+                const elData = elementsDb[id]; 
+                const item = document.createElement('div');
+                item.className = 'inventory-item';
+                item.draggable = true;
+                item.innerText = `${elData.emoji} ${elData.name}`;
+
+                item.ondragstart = (e) => {
+                    e.dataTransfer.setData('text/plain', id);
+                    e.dataTransfer.setData('source', 'inventory');
+                };
+                inventoryDiv.appendChild(item);
+            });
+        }
+
+        boardDiv.ondragover = (e) => e.preventDefault();
+        boardDiv.ondrop = (e) => {
+            e.preventDefault();
+            const elementId = e.dataTransfer.getData('text/plain');
+            const source = e.dataTransfer.getData('source');
+
+            if (source === 'inventory') {
+                createBoardElement(elementId, e.offsetX, e.offsetY);
+            }
+        };
+
+        function createBoardElement(id, x, y) {
+            const elData = elementsDb[id]; 
+            const el = document.createElement('div');
+            el.className = 'element';
+            el.innerText = `${elData.emoji} ${elData.name}`;
+            el.style.left = x + 'px';
+            el.style.top = y + 'px';
+            el.draggable = true;
+
+            el.ondragstart = (e) => {
+                e.dataTransfer.setData('text/plain', id);
+                e.dataTransfer.setData('source', 'board');
+                setTimeout(() => el.remove(), 0);
+            };
+
+            el.ondragover = (e) => e.preventDefault();
+            el.ondrop = (e) => {
+                e.preventDefault();
+                e.stopPropagation(); 
+                
+                const draggedId = e.dataTransfer.getData('text/plain');
+                const targetId = id;
+
+                const combinationKey = [draggedId, targetId].sort().join('+');
+                
+                if (recipes[combinationKey]) {
+                    const newElementId = recipes[combinationKey];
+                    const newElementData = elementsDb[newElementId];
+                    
+                    // ======== 3. 使用 Config 字串與 Toast 顯示通知 ========
+                    if (!unlockedElements.has(newElementId)) {
+                        unlockedElements.add(newElementId); 
+                        renderInventory(); 
+                        updateProgress(); 
+                        
+                        // 組合通知文字： "你發現了一個新元素！ 🌋 巖漿"
+                        const notifyMsg = `${window.iconCraftConfig.gameUi.newElementDiscovered} ${newElementData.emoji} ${newElementData.name}`;
+                        showToast(notifyMsg);
+                    }
+
+                    createBoardElement(newElementId, x, y); 
+                    el.remove(); 
+                    el.style.boxShadow = "0 0 15px #090"; 
+                } else {
+                    createBoardElement(draggedId, x + 60, y + 20);
+                }
+            };
+
+            boardDiv.appendChild(el);
+        }
+
+        // 圖鑑功能區塊
+        document.getElementById('open-gallery-btn').onclick = () => {
+            galleryGrid.innerHTML = ''; 
+            
+            Object.values(elementsDb).forEach(elData => {
+                const itemDiv = document.createElement('div');
+                const isUnlocked = unlockedElements.has(elData.id);
+                
+                itemDiv.className = `gallery-item ${isUnlocked ? 'unlocked' : 'locked'}`;
+                
+                const displayEmoji = isUnlocked ? elData.emoji : "❓";
+                const displayName = isUnlocked ? elData.name : "未知元素";
+                
+                itemDiv.innerHTML = `
+                    <div class="gallery-emoji">${displayEmoji}</div>
+                    <div class="gallery-name">${displayName}</div>
+                `;
+                
+                galleryGrid.appendChild(itemDiv);
+            });
+
+            galleryModal.style.display = 'flex'; 
+        };
+
+        document.getElementById('close-btn').onclick = () => {
+            galleryModal.style.display = 'none';
+        };
+
+        galleryModal.onclick = (e) => {
+            if (e.target === galleryModal) {
+                galleryModal.style.display = 'none';
+            }
+        };
+
+        loadRecipes();
+    </script>
+</body>
+</html>
