@@ -2,17 +2,32 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>迷你合成實驗室 - 專業通知版</title>
+    <title>迷你合成實驗室</title>
     <style>
-        body { font-family: "微軟正黑體", sans-serif; display: flex; flex-direction: column; align-items: center; background: #f4f4f9; padding: 20px; margin: 0; }
         h1 { color: #188038; margin-bottom: 5px; }
+
+
+        body { 
+            font-family: "微軟正黑體", sans-serif; 
+            display: flex; flex-direction: column; align-items: center; 
+            background: #f4f4f9; padding: 20px; margin: 0; 
+            /* 👇 關鍵：徹底關閉手機瀏覽器的下拉重整與邊緣回彈 */
+            overscroll-behavior: none; 
+        }
+
+        #board { 
+            width: 80%; height: 500px; background: white; 
+            border: 3px dashed #ccc; border-radius: 8px; 
+            position: relative; overflow: hidden; box-sizing: border-box; 
+            /* 👇 關鍵：告訴手機，在畫布上的所有滑動都是遊戲操作，不要當作滑動網頁 */
+            touch-action: none; 
+        }
         
         #toolbar { width: 80%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
         .btn { padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 8px; border: 1px solid #188038; background: #188038; color: white; font-weight: bold; transition: 0.2s; }
         .btn:hover { background: #0e4c21; transform: scale(1.05); }
 
         #inventory { display: flex; gap: 10px; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); flex-wrap: wrap; width: 80%; justify-content: center; min-height: 40px; box-sizing: border-box; margin-bottom: 20px;}
-        #board { width: 80%; height: 500px; background: white; border: 3px dashed #ccc; border-radius: 8px; position: relative; overflow: hidden; box-sizing: border-box; }
         .element { padding: 10px 15px; background: #0078d5; color: white; border-radius: 20px; cursor: grab; user-select: none; position: absolute; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: transform 0.1s; touch-action: none; }
         .element:active { cursor: grabbing; transform: scale(1.1); }
         .inventory-item { padding: 10px 15px; background: #188038; color: white; border-radius: 20px; cursor: grab; user-select: none; touch-action: none; }
@@ -207,6 +222,7 @@
             }
         };
 
+// 建立可移動、可觸控合成的元素
         function createBoardElement(id, x, y) {
             const elData = elementsDb[id]; 
             const el = document.createElement('div');
@@ -215,47 +231,108 @@
             el.style.left = x + 'px';
             el.style.top = y + 'px';
             el.draggable = true;
+            
+            // 👇 幫元素貼上隱藏標籤，方便等一下判斷碰撞的是誰
+            el.dataset.id = id; 
 
+            // ==========================================
+            //  電腦版邏輯 (Mouse Drag & Drop)
+            // ==========================================
             el.ondragstart = (e) => {
                 e.dataTransfer.setData('text/plain', id);
                 e.dataTransfer.setData('source', 'board');
                 setTimeout(() => el.remove(), 0);
             };
-
             el.ondragover = (e) => e.preventDefault();
             el.ondrop = (e) => {
                 e.preventDefault();
                 e.stopPropagation(); 
-                
-                const draggedId = e.dataTransfer.getData('text/plain');
-                const targetId = id;
+                handleCombine(e.dataTransfer.getData('text/plain'), id, el, x, y);
+            };
 
-                const combinationKey = [draggedId, targetId].sort().join('+');
-                
-                if (recipes[combinationKey]) {
-                    const newElementId = recipes[combinationKey];
-                    const newElementData = elementsDb[newElementId];
-                    
-                    // ======== 3. 使用 Config 字串與 Toast 顯示通知 ========
-                    if (!unlockedElements.has(newElementId)) {
-                        unlockedElements.add(newElementId); 
-                        renderInventory(); 
-                        updateProgress(); 
-                        
-                        // 組合通知文字： "你發現了一個新元素！ 🌋 巖漿"
-                        const notifyMsg = `${window.iconCraftConfig.gameUi.newElementDiscovered} ${newElementData.emoji} ${newElementData.name}`;
-                        showToast(notifyMsg);
-                    }
+            // ==========================================
+            //  手機版邏輯 (Touch Events)
+            // ==========================================
+            let isDragging = false;
+            let startX, startY, initialX, initialY;
 
-                    createBoardElement(newElementId, x, y); 
-                    el.remove(); 
-                    el.style.boxShadow = "0 0 15px #090"; 
+            // 1. 手指按下去
+            el.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                const touch = e.touches[0];
+                startX = touch.clientX;
+                startY = touch.clientY;
+                initialX = parseInt(el.style.left) || 0;
+                initialY = parseInt(el.style.top) || 0;
+                el.style.zIndex = 1000; // 拖曳時把元素拉到最上層
+            }, {passive: false});
+
+            // 2. 手指滑動中
+            el.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                e.preventDefault(); // 阻止畫面跟著滑動
+                const touch = e.touches[0];
+                const dx = touch.clientX - startX;
+                const dy = touch.clientY - startY;
+                el.style.left = (initialX + dx) + 'px';
+                el.style.top = (initialY + dy) + 'px';
+            }, {passive: false});
+
+            // 3. 手指放開 (檢查有沒有撞到別人)
+            el.addEventListener('touchend', (e) => {
+                if (!isDragging) return;
+                isDragging = false;
+                el.style.zIndex = '';
+
+                // 為了知道手指下面有沒有其他元素，我們先把「自己」變成隱形穿透狀態
+                el.style.pointerEvents = 'none';
+                
+                // 抓出手指放開位置的那個元素
+                const touch = e.changedTouches[0];
+                const targetEl = document.elementFromPoint(touch.clientX, touch.clientY);
+                
+                // 恢復自己的實體狀態
+                el.style.pointerEvents = 'auto';
+
+                // 如果撞到的東西剛好也是一個元素
+                if (targetEl && targetEl.classList.contains('element')) {
+                    const targetId = targetEl.dataset.id;
+                    handleCombine(id, targetId, targetEl, parseInt(targetEl.style.left), parseInt(targetEl.style.top), el);
+                }
+            });
+
+            boardDiv.appendChild(el);
+        }
+
+        // 獨立出一個「合成處理中心」，讓電腦和手機都能共用這個邏輯
+        function handleCombine(draggedId, targetId, targetEl, x, y, draggedEl = null) {
+            const combinationKey = [draggedId, targetId].sort().join('+');
+            
+            if (recipes[combinationKey]) {
+                const newElementId = recipes[combinationKey];
+                const newElementData = elementsDb[newElementId];
+                
+                if (!unlockedElements.has(newElementId)) {
+                    unlockedElements.add(newElementId); 
+                    renderInventory(); 
+                    updateProgress(); 
+                    const notifyMsg = `${window.iconCraftConfig.gameUi.newElementDiscovered} ${newElementData.emoji} ${newElementData.name}`;
+                    showToast(notifyMsg);
+                }
+
+                createBoardElement(newElementId, x, y); 
+                targetEl.remove(); 
+                if(draggedEl) draggedEl.remove(); // 手機版需要把拖曳的元素刪掉
+                
+            } else {
+                // 如果合成失敗，手機版就把元素彈開一點點
+                if(draggedEl) {
+                    draggedEl.style.left = (x + 60) + 'px';
+                    draggedEl.style.top = (y + 20) + 'px';
                 } else {
                     createBoardElement(draggedId, x + 60, y + 20);
                 }
-            };
-
-            boardDiv.appendChild(el);
+            }
         }
 
         // 圖鑑功能區塊
