@@ -13,10 +13,9 @@
 
         #inventory { display: flex; gap: 10px; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); flex-wrap: wrap; width: 80%; justify-content: center; min-height: 40px; box-sizing: border-box; margin-bottom: 20px;}
         #board { width: 80%; height: 500px; background: white; border: 3px dashed #ccc; border-radius: 8px; position: relative; overflow: hidden; box-sizing: border-box; }
-        
-        .element { padding: 10px 15px; background: #0078d5; color: white; border-radius: 20px; cursor: grab; user-select: none; position: absolute; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: transform 0.1s; }
+        .element { padding: 10px 15px; background: #0078d5; color: white; border-radius: 20px; cursor: grab; user-select: none; position: absolute; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: transform 0.1s; touch-action: none; }
         .element:active { cursor: grabbing; transform: scale(1.1); }
-        .inventory-item { padding: 10px 15px; background: #188038; color: white; border-radius: 20px; cursor: grab; user-select: none; }
+        .inventory-item { padding: 10px 15px; background: #188038; color: white; border-radius: 20px; cursor: grab; user-select: none; touch-action: none; }
 
         /* 圖鑑彈出視窗樣式 */
         #gallery-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(3px); }
@@ -159,6 +158,7 @@
             modalProgressText.innerText = `收集進度：${text}`;
         }
 
+        // 顯示頂部庫存（加入點擊生成功能）
         function renderInventory() {
             inventoryDiv.innerHTML = '';
             unlockedElements.forEach(id => {
@@ -168,10 +168,30 @@
                 item.draggable = true;
                 item.innerText = `${elData.emoji} ${elData.name}`;
 
+                // 保留原本的拖曳功能（讓習慣用電腦滑鼠的玩家還是可以拖曳）
                 item.ondragstart = (e) => {
                     e.dataTransfer.setData('text/plain', id);
                     e.dataTransfer.setData('source', 'inventory');
                 };
+
+                // ======== 新增：點擊就直接在畫布中央產生 ========
+                item.onclick = () => {
+                    // 取得畫布的寬度和高度
+                    const boardWidth = boardDiv.offsetWidth;
+                    const boardHeight = boardDiv.offsetHeight;
+                    
+                    // 計算畫布中心的座標（稍微扣掉一點元素的寬高來置中）
+                    const centerX = boardWidth / 2 - 40;
+                    const centerY = boardHeight / 2 - 20;
+
+                    // 加上一點點隨機的偏移量 (正負 30px)，這樣連續點好幾下時，元素才不會完美重疊在一起看起來像只有一個
+                    const randomX = centerX + (Math.random() * 60 - 30);
+                    const randomY = centerY + (Math.random() * 60 - 30);
+
+                    // 在畫布上創造這個元素！
+                    createBoardElement(id, randomX, randomY);
+                };
+
                 inventoryDiv.appendChild(item);
             });
         }
