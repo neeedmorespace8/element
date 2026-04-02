@@ -2,95 +2,140 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>迷你合成實驗室</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>迷你合成實驗室 - 完美雙棲版</title>
     <style>
-        h1 { color: #188038; margin-bottom: 5px; }
-
-
+        /* ==========================================
+           全域與排版基礎 (使用 Flexbox)
+           ========================================== */
         body { 
             font-family: "微軟正黑體", sans-serif; 
-            display: flex; flex-direction: column; align-items: center; 
-            background: #f4f4f9; padding: 20px; margin: 0; 
-            /* 👇 關鍵：徹底關閉手機瀏覽器的下拉重整與邊緣回彈 */
-            overscroll-behavior: none; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            background: #f4f4f9; 
+            margin: 0; 
+            padding: 0;
+            height: 100dvh; /* 動態視窗高度，完美貼合手機螢幕 */
+            overscroll-behavior: none; /* 禁用下拉重整 */
+            overflow: hidden; /* 鎖死整個網頁的滾動，只允許內部滾動 */
+        }
+
+        h1 { 
+            color: #188038; 
+            margin: 10px 0; 
+            flex-shrink: 0; 
+        }
+        
+        /* ==========================================
+           電腦版預設佈局 (Desktop First)
+           ========================================== */
+        #toolbar { 
+            width: 90%; max-width: 800px; 
+            display: flex; justify-content: space-between; align-items: center; 
+            margin-bottom: 10px; flex-shrink: 0; 
+            order: 1; /* 排在第 1 個 */
+        }
+
+        #inventory { 
+            width: 90%; max-width: 800px; 
+            display: flex; gap: 10px; padding: 15px; 
+            background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+            flex-wrap: wrap; justify-content: center; align-content: flex-start;
+            max-height: 150px; overflow-y: auto; box-sizing: border-box; 
+            margin-bottom: 10px; flex-shrink: 0;
+            order: 2; /* 排在第 2 個 */
         }
 
         #board { 
-            width: 80%; height: 500px; background: white; 
-            border: 3px dashed #ccc; border-radius: 8px; 
+            width: 90%; max-width: 800px; 
+            flex-grow: 1; /* 畫布會自動填滿剩下的所有空間 */
+            background: white; border: 3px dashed #ccc; border-radius: 8px; 
             position: relative; overflow: hidden; box-sizing: border-box; 
-            /* 👇 關鍵：告訴手機，在畫布上的所有滑動都是遊戲操作，不要當作滑動網頁 */
-            touch-action: none; 
+            margin-bottom: 20px;
+            touch-action: none; /* 禁用畫布上的預設觸控行為 */
+            order: 3; /* 排在第 3 個 */
         }
-        
-        #toolbar { width: 80%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+
+        /* 按鈕與元素樣式 */
         .btn { padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 8px; border: 1px solid #188038; background: #188038; color: white; font-weight: bold; transition: 0.2s; }
         .btn:hover { background: #0e4c21; transform: scale(1.05); }
-
-        #inventory { display: flex; gap: 10px; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); flex-wrap: wrap; width: 80%; justify-content: center; min-height: 40px; box-sizing: border-box; margin-bottom: 20px;}
         .element { padding: 10px 15px; background: #0078d5; color: white; border-radius: 20px; cursor: grab; user-select: none; position: absolute; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: transform 0.1s; touch-action: none; }
         .element:active { cursor: grabbing; transform: scale(1.1); }
         .inventory-item { padding: 10px 15px; background: #188038; color: white; border-radius: 20px; cursor: grab; user-select: none; touch-action: none; }
 
-        /* 圖鑑彈出視窗樣式 */
+        /* ==========================================
+           手機版專屬佈局 (螢幕寬度 <= 560px)
+           ========================================== */
+        @media (max-width: 560px) {
+            h1 { font-size: 1.5rem; margin: 5px 0; }
+            
+            /* 隱藏提示文字節省手機空間 */
+            #toolbar span { display: none; } 
+            
+            #toolbar {
+                order: 3; /* 把工具列移到下方 */
+                width: 100%;
+                margin: 0;
+                padding: 10px;
+                box-sizing: border-box;
+                justify-content: center; /* 讓按鈕置中 */
+                background: white;
+                border-top: 1px solid #ddd;
+                z-index: 10;
+            }
+
+            #inventory {
+                order: 4; /* 把庫存移到最底部 */
+                width: 100%;
+                border-radius: 0;
+                margin: 0;
+                padding: 10px;
+                max-height: 25vh; /* 庫存區最多佔螢幕 25% 的高度 */
+                box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+                z-index: 10;
+            }
+
+            #board {
+                order: 2; /* 畫布拉到上方 */
+                width: 100%;
+                border-radius: 0;
+                border: none;
+                border-bottom: 2px dashed #ccc;
+                margin: 0;
+            }
+        }
+
+        /* 圖鑑與浮動通知樣式 (保持不變) */
         #gallery-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(3px); }
-        #gallery-content { background: white; width: 80%; max-width: 700px; height: 70vh; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        #gallery-content { background: white; width: 90%; max-width: 700px; height: 75vh; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; position: relative; box-shadow: 0 10px 25px rgba(0,0,0,0.2); box-sizing: border-box; }
         #close-btn { position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; border: none; background: none; color: #666; }
-        #close-btn:hover { color: #000; }
         .gallery-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
-        .gallery-header h2 { margin: 0; color: #333; }
-        #gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 15px; overflow-y: auto; padding-right: 10px; align-content: start; }
-        .gallery-item { display: flex; flex-direction: column; align-items: center; padding: 15px 5px; border-radius: 10px; border: 2px solid transparent; background: #f9f9f9; transition: 0.3s; }
-        .gallery-emoji { font-size: 32px; margin-bottom: 8px; }
-        .gallery-name { font-size: 14px; font-weight: bold; text-align: center; }
+        .gallery-header h2 { margin: 0; color: #333; font-size: 1.2rem; }
+        #gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 10px; overflow-y: auto; padding-right: 5px; align-content: start; }
+        .gallery-item { display: flex; flex-direction: column; align-items: center; padding: 10px 5px; border-radius: 10px; border: 2px solid transparent; background: #f9f9f9; transition: 0.3s; }
+        .gallery-emoji { font-size: 28px; margin-bottom: 5px; }
+        .gallery-name { font-size: 12px; font-weight: bold; text-align: center; }
         .gallery-item.unlocked { background: #e8f5e9; border-color: #188038; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         .gallery-item.unlocked .gallery-name { color: #188038; }
         .gallery-item.locked { background: #eee; border-color: #ddd; }
         .gallery-item.locked .gallery-emoji { filter: grayscale(100%) opacity(0.2); }
         .gallery-item.locked .gallery-name { color: #999; }
 
-        /* ======== 新增：浮動通知 (Toast) 樣式 ======== */
-        #toast-container {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            z-index: 2000;
-            pointer-events: none; /* 讓滑鼠點擊可以穿透它，不影響遊戲操作 */
-        }
-        .toast {
-            background: #218838;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            font-size: 16px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            /* 讓它有浮現並在幾秒後消失的動畫 */
-            animation: slideFadeInOut 3s ease-in-out forwards;
-        }
-        @keyframes slideFadeInOut {
-            0% { opacity: 0; transform: translateY(30px) scale(0.9); }
-            10% { opacity: 1; transform: translateY(0) scale(1); }
-            85% { opacity: 1; transform: translateY(0) scale(1); }
-            100% { opacity: 0; transform: translateY(-20px) scale(0.9); }
-        }
+        #toast-container { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; gap: 10px; z-index: 2000; pointer-events: none; }
+        .toast { background: #218838; color: white; padding: 12px 24px; border-radius: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); font-size: 14px; font-weight: bold; display: flex; align-items: center; gap: 8px; animation: slideFadeInOut 3s ease-in-out forwards; white-space: nowrap;}
+        @keyframes slideFadeInOut { 0% { opacity: 0; transform: translateY(30px) scale(0.9); } 10% { opacity: 1; transform: translateY(0) scale(1); } 85% { opacity: 1; transform: translateY(0) scale(1); } 100% { opacity: 0; transform: translateY(-20px) scale(0.9); } }
     </style>
 </head>
 <body>
     <h1>🧪 迷你合成實驗室</h1>
     
     <div id="toolbar">
-        <span>拖曳元素互相重疊來合成新物品！</span>
+        <span>點擊下方庫存，或拖曳元素到畫布上合成新物品！</span>
         <button class="btn" id="open-gallery-btn">🏆 查看圖鑑 (<span id="progress-text">0/0</span>)</button>
     </div>
 
+    <!-- HTML 結構完全不變，純靠 CSS 控制順序 -->
     <div id="inventory"></div>
     <div id="board"></div>
 
@@ -99,17 +144,15 @@
             <button id="close-btn">&times;</button>
             <div class="gallery-header">
                 <h2>📖 造物圖鑑</h2>
-                <h3 id="modal-progress-text">進度：0 / 0</h3>
+                <h3 id="modal-progress-text" style="font-size: 1rem;">進度：0/0</h3>
             </div>
             <div id="gallery-grid"></div>
         </div>
     </div>
 
-    <!-- 新增：浮動通知的容器 -->
     <div id="toast-container"></div>
 
     <script>
-        // ======== 1. 建立原汁原味的 Config 設定檔 ========
         window.iconCraftConfig = {
             gameUi: {
                 newElementDiscovered: "你發現了一個新元素！",
@@ -118,22 +161,15 @@
             }
         };
 
-        // ======== 2. 建立 Toast 浮動通知系統 ========
         function showToast(message) {
             const container = document.getElementById('toast-container');
             const toast = document.createElement('div');
             toast.className = 'toast';
             toast.innerText = message;
-            
             container.appendChild(toast);
-            
-            // 動畫總共 3 秒，3 秒後把這個元素從網頁上徹底刪除，以免塞滿記憶體
-            setTimeout(() => {
-                toast.remove();
-            }, 3000);
+            setTimeout(() => { toast.remove(); }, 3000);
         }
 
-        // 以下為遊戲核心邏輯
         let elementsDb = {}; 
         let recipes = {};    
         const unlockedElements = new Set(["water", "fire", "earth", "air"]);
@@ -149,7 +185,6 @@
             try {
                 const response = await fetch('recipes.json');
                 const rawData = await response.json();
-
                 rawData.forEach(item => {
                     elementsDb[item.id] = item;
                     if (item.parents && item.parents !== "") {
@@ -157,7 +192,6 @@
                         recipes[recipeKey] = item.id;
                     }
                 });
-
                 renderInventory();
                 updateProgress(); 
             } catch (error) {
@@ -168,12 +202,11 @@
         function updateProgress() {
             const total = Object.keys(elementsDb).length;
             const current = unlockedElements.size;
-            const text = `${current} / ${total}`;
+            const text = `${current}/${total}`;
             progressText.innerText = text;
             modalProgressText.innerText = `收集進度：${text}`;
         }
 
-        // 顯示頂部庫存（加入點擊生成功能）
         function renderInventory() {
             inventoryDiv.innerHTML = '';
             unlockedElements.forEach(id => {
@@ -183,27 +216,20 @@
                 item.draggable = true;
                 item.innerText = `${elData.emoji} ${elData.name}`;
 
-                // 保留原本的拖曳功能（讓習慣用電腦滑鼠的玩家還是可以拖曳）
+                // 電腦版拖曳
                 item.ondragstart = (e) => {
                     e.dataTransfer.setData('text/plain', id);
                     e.dataTransfer.setData('source', 'inventory');
                 };
 
-                // ======== 新增：點擊就直接在畫布中央產生 ========
+                // 手機版與電腦版的點擊產生邏輯
                 item.onclick = () => {
-                    // 取得畫布的寬度和高度
                     const boardWidth = boardDiv.offsetWidth;
                     const boardHeight = boardDiv.offsetHeight;
-                    
-                    // 計算畫布中心的座標（稍微扣掉一點元素的寬高來置中）
                     const centerX = boardWidth / 2 - 40;
                     const centerY = boardHeight / 2 - 20;
-
-                    // 加上一點點隨機的偏移量 (正負 30px)，這樣連續點好幾下時，元素才不會完美重疊在一起看起來像只有一個
                     const randomX = centerX + (Math.random() * 60 - 30);
                     const randomY = centerY + (Math.random() * 60 - 30);
-
-                    // 在畫布上創造這個元素！
                     createBoardElement(id, randomX, randomY);
                 };
 
@@ -216,13 +242,11 @@
             e.preventDefault();
             const elementId = e.dataTransfer.getData('text/plain');
             const source = e.dataTransfer.getData('source');
-
             if (source === 'inventory') {
                 createBoardElement(elementId, e.offsetX, e.offsetY);
             }
         };
 
-// 建立可移動、可觸控合成的元素
         function createBoardElement(id, x, y) {
             const elData = elementsDb[id]; 
             const el = document.createElement('div');
@@ -231,13 +255,9 @@
             el.style.left = x + 'px';
             el.style.top = y + 'px';
             el.draggable = true;
-            
-            // 👇 幫元素貼上隱藏標籤，方便等一下判斷碰撞的是誰
             el.dataset.id = id; 
 
-            // ==========================================
-            //  電腦版邏輯 (Mouse Drag & Drop)
-            // ==========================================
+            // 電腦版滑鼠邏輯
             el.ondragstart = (e) => {
                 e.dataTransfer.setData('text/plain', id);
                 e.dataTransfer.setData('source', 'board');
@@ -250,13 +270,10 @@
                 handleCombine(e.dataTransfer.getData('text/plain'), id, el, x, y);
             };
 
-            // ==========================================
-            //  手機版邏輯 (Touch Events)
-            // ==========================================
+            // 手機版觸控邏輯
             let isDragging = false;
             let startX, startY, initialX, initialY;
 
-            // 1. 手指按下去
             el.addEventListener('touchstart', (e) => {
                 isDragging = true;
                 const touch = e.touches[0];
@@ -264,37 +281,34 @@
                 startY = touch.clientY;
                 initialX = parseInt(el.style.left) || 0;
                 initialY = parseInt(el.style.top) || 0;
-                el.style.zIndex = 1000; // 拖曳時把元素拉到最上層
+                el.style.zIndex = 1000; 
             }, {passive: false});
 
-            // 2. 手指滑動中
             el.addEventListener('touchmove', (e) => {
                 if (!isDragging) return;
-                e.preventDefault(); // 阻止畫面跟著滑動
+                e.preventDefault(); 
                 const touch = e.touches[0];
                 const dx = touch.clientX - startX;
                 const dy = touch.clientY - startY;
-                el.style.left = (initialX + dx) + 'px';
-                el.style.top = (initialY + dy) + 'px';
+                
+                // 確保拖曳不會超出畫布邊界
+                let newX = initialX + dx;
+                let newY = initialY + dy;
+                
+                el.style.left = newX + 'px';
+                el.style.top = newY + 'px';
             }, {passive: false});
 
-            // 3. 手指放開 (檢查有沒有撞到別人)
             el.addEventListener('touchend', (e) => {
                 if (!isDragging) return;
                 isDragging = false;
                 el.style.zIndex = '';
 
-                // 為了知道手指下面有沒有其他元素，我們先把「自己」變成隱形穿透狀態
                 el.style.pointerEvents = 'none';
-                
-                // 抓出手指放開位置的那個元素
                 const touch = e.changedTouches[0];
                 const targetEl = document.elementFromPoint(touch.clientX, touch.clientY);
-                
-                // 恢復自己的實體狀態
                 el.style.pointerEvents = 'auto';
 
-                // 如果撞到的東西剛好也是一個元素
                 if (targetEl && targetEl.classList.contains('element')) {
                     const targetId = targetEl.dataset.id;
                     handleCombine(id, targetId, targetEl, parseInt(targetEl.style.left), parseInt(targetEl.style.top), el);
@@ -304,7 +318,6 @@
             boardDiv.appendChild(el);
         }
 
-        // 獨立出一個「合成處理中心」，讓電腦和手機都能共用這個邏輯
         function handleCombine(draggedId, targetId, targetEl, x, y, draggedEl = null) {
             const combinationKey = [draggedId, targetId].sort().join('+');
             
@@ -322,10 +335,9 @@
 
                 createBoardElement(newElementId, x, y); 
                 targetEl.remove(); 
-                if(draggedEl) draggedEl.remove(); // 手機版需要把拖曳的元素刪掉
+                if(draggedEl) draggedEl.remove(); 
                 
             } else {
-                // 如果合成失敗，手機版就把元素彈開一點點
                 if(draggedEl) {
                     draggedEl.style.left = (x + 60) + 'px';
                     draggedEl.style.top = (y + 20) + 'px';
@@ -335,39 +347,31 @@
             }
         }
 
-        // 圖鑑功能區塊
+        // 圖鑑邏輯
         document.getElementById('open-gallery-btn').onclick = () => {
             galleryGrid.innerHTML = ''; 
-            
             Object.values(elementsDb).forEach(elData => {
                 const itemDiv = document.createElement('div');
                 const isUnlocked = unlockedElements.has(elData.id);
-                
                 itemDiv.className = `gallery-item ${isUnlocked ? 'unlocked' : 'locked'}`;
-                
                 const displayEmoji = isUnlocked ? elData.emoji : "❓";
                 const displayName = isUnlocked ? elData.name : "未知元素";
-                
                 itemDiv.innerHTML = `
                     <div class="gallery-emoji">${displayEmoji}</div>
                     <div class="gallery-name">${displayName}</div>
                 `;
-                
                 galleryGrid.appendChild(itemDiv);
             });
-
             galleryModal.style.display = 'flex'; 
         };
 
-        document.getElementById('close-btn').onclick = () => {
-            galleryModal.style.display = 'none';
-        };
+        document.getElementById('close-btn').onclick = () => { galleryModal.style.display = 'none'; };
+        galleryModal.onclick = (e) => { if (e.target === galleryModal) galleryModal.style.display = 'none'; };
 
-        galleryModal.onclick = (e) => {
-            if (e.target === galleryModal) {
-                galleryModal.style.display = 'none';
-            }
-        };
+        // 避免雙擊放大畫面 (iOS Safari 必備)
+        document.addEventListener('dblclick', function(event) {
+            event.preventDefault();
+        }, { passive: false });
 
         loadRecipes();
     </script>
